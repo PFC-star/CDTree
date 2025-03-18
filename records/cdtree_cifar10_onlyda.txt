@@ -1,0 +1,3314 @@
+root@828b5a21edb1:/workspace/CDTree# sh train_init.sh
+Files already downloaded and verified
+Files already downloaded and verified
+============== Performance on task 0 =================
+/workspace/CDTree/utils/models.py:1077: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  return F.log_softmax(out)
+/opt/conda/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Test set: Average loss: 1.2063, Top-1 Accuracy: 5020/6000 (83.6667%)
+Took 4.132508993148804 seconds.
+Test set: Average loss: 1.2063, Top-5 Accuracy: 5983.0/6000 (99.7167%)
+Took 4.132508993148804 seconds.
+
+----- Top1 acc: [83.66666412353516]
+----- Top5 acc: [99.71666717529297]
+============== Continual learning on task 1 =================
+
+[before adaption and growth]
+Test set: Average loss: 2.0534, Top-1 Accuracy: 4276/6000 (71.2667%)
+Took 5.285117864608765 seconds.
+Test set: Average loss: 2.0534, Top-5 Accuracy: 5934.0/6000 (98.9000%)
+Took 5.285117864608765 seconds.
+old_data shape: torch.Size([25000, 3072])
+new_data_1 shape: torch.Size([25000, 3072])
+MMD loss:tensor(0.3035, device='cuda:0')
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 2.0534, Top-1 Accuracy: 4276/6000 (71.2667%)
+Took 18.16755700111389 seconds.
+Test set: Average loss: 2.0534, Top-5 Accuracy: 5934.0/6000 (98.9000%)
+Took 18.16755700111389 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.390177
+Train set: Average loss: 0.5554
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.8371, Accuracy: 8262/12000 (69%)
+Took 34.42690658569336 seconds.
+Test set: Average loss: 1.9357, Top-1 Accuracy: 3917/6000 (65.2833%)
+Took 35.471112966537476 seconds.
+Test set: Average loss: 1.9357, Top-5 Accuracy: 5866.0/6000 (97.7667%)
+Took 35.471112966537476 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.283027
+Train set: Average loss: 0.3313
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.7758, Accuracy: 8379/12000 (70%)
+Took 51.74865198135376 seconds.
+Test set: Average loss: 1.9507, Top-1 Accuracy: 3953/6000 (65.8833%)
+Took 52.7857506275177 seconds.
+Test set: Average loss: 1.9507, Top-5 Accuracy: 5923.0/6000 (98.7167%)
+Took 52.7857506275177 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.239082
+Train set: Average loss: 0.2597
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.6393, Accuracy: 8649/12000 (72%)
+Took 68.9934892654419 seconds.
+Test set: Average loss: 1.7227, Top-1 Accuracy: 4147/6000 (69.1167%)
+Took 70.03407073020935 seconds.
+Test set: Average loss: 1.7227, Top-5 Accuracy: 5959.0/6000 (99.3167%)
+Took 70.03407073020935 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.215665
+Train set: Average loss: 0.2284
+Valid set: Average loss: 2.2375, Accuracy: 8326/12000 (69%)
+Took 86.31169867515564 seconds.
+Test set: Average loss: 2.3097, Top-1 Accuracy: 4027/6000 (67.1167%)
+Took 87.34975838661194 seconds.
+Test set: Average loss: 2.3097, Top-5 Accuracy: 5913.0/6000 (98.5500%)
+Took 87.34975838661194 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.180765
+Train set: Average loss: 0.2033
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.8963, Accuracy: 8662/12000 (72%)
+Took 103.60146355628967 seconds.
+Test set: Average loss: 1.9639, Top-1 Accuracy: 4181/6000 (69.6833%)
+Took 104.63808417320251 seconds.
+Test set: Average loss: 1.9639, Top-5 Accuracy: 5947.0/6000 (99.1167%)
+Took 104.63808417320251 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.151233
+Train set: Average loss: 0.1760
+Valid set: Average loss: 2.5215, Accuracy: 8132/12000 (68%)
+Took 120.80197811126709 seconds.
+Test set: Average loss: 2.6265, Top-1 Accuracy: 3921/6000 (65.3500%)
+Took 121.83969163894653 seconds.
+Test set: Average loss: 2.6265, Top-5 Accuracy: 5946.0/6000 (99.1000%)
+Took 121.83969163894653 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.128669
+Train set: Average loss: 0.1643
+Valid set: Average loss: 2.0159, Accuracy: 8570/12000 (71%)
+Took 137.98916721343994 seconds.
+Test set: Average loss: 2.0478, Top-1 Accuracy: 4189/6000 (69.8167%)
+Took 139.0261459350586 seconds.
+Test set: Average loss: 2.0478, Top-5 Accuracy: 5946.0/6000 (99.1000%)
+Took 139.0261459350586 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.121860
+Train set: Average loss: 0.1429
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.6977, Accuracy: 8950/12000 (75%)
+Took 155.18583250045776 seconds.
+Test set: Average loss: 1.6491, Top-1 Accuracy: 4418/6000 (73.6333%)
+Took 156.22483897209167 seconds.
+Test set: Average loss: 1.6491, Top-5 Accuracy: 5956.0/6000 (99.2667%)
+Took 156.22483897209167 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.104334
+Train set: Average loss: 0.1235
+Valid set: Average loss: 1.8254, Accuracy: 8947/12000 (75%)
+Took 172.3855984210968 seconds.
+Test set: Average loss: 1.8220, Top-1 Accuracy: 4413/6000 (73.5500%)
+Took 173.42840909957886 seconds.
+Test set: Average loss: 1.8220, Top-5 Accuracy: 5949.0/6000 (99.1500%)
+Took 173.42840909957886 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.106805
+Train set: Average loss: 0.1186
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.7758, Accuracy: 8995/12000 (75%)
+Took 189.58761286735535 seconds.
+Test set: Average loss: 1.6410, Top-1 Accuracy: 4470/6000 (74.5000%)
+Took 190.63743114471436 seconds.
+Test set: Average loss: 1.6410, Top-5 Accuracy: 5925.0/6000 (98.7500%)
+Took 190.63743114471436 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.107058
+Train set: Average loss: 0.1138
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.6805, Accuracy: 9010/12000 (75%)
+Took 206.84233808517456 seconds.
+Test set: Average loss: 1.8779, Top-1 Accuracy: 4362/6000 (72.7000%)
+Took 207.88060545921326 seconds.
+Test set: Average loss: 1.8779, Top-5 Accuracy: 5926.0/6000 (98.7667%)
+Took 207.88060545921326 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.100269
+Train set: Average loss: 0.1021
+Valid set: Average loss: 1.7238, Accuracy: 8940/12000 (74%)
+Took 224.08542776107788 seconds.
+Test set: Average loss: 1.8013, Top-1 Accuracy: 4366/6000 (72.7667%)
+Took 225.12400460243225 seconds.
+Test set: Average loss: 1.8013, Top-5 Accuracy: 5934.0/6000 (98.9000%)
+Took 225.12400460243225 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.085988
+Train set: Average loss: 0.0934
+Valid set: Average loss: 2.2619, Accuracy: 8738/12000 (73%)
+Took 241.31144261360168 seconds.
+Test set: Average loss: 2.4902, Top-1 Accuracy: 4208/6000 (70.1333%)
+Took 242.348566532135 seconds.
+Test set: Average loss: 2.4902, Top-5 Accuracy: 5899.0/6000 (98.3167%)
+Took 242.348566532135 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.073834
+Train set: Average loss: 0.0894
+Valid set: Average loss: 2.2175, Accuracy: 8721/12000 (73%)
+Took 258.53451776504517 seconds.
+Test set: Average loss: 2.2381, Top-1 Accuracy: 4297/6000 (71.6167%)
+Took 259.5721127986908 seconds.
+Test set: Average loss: 2.2381, Top-5 Accuracy: 5927.0/6000 (98.7833%)
+Took 259.5721127986908 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.099964
+Train set: Average loss: 0.0827
+Valid set: Average loss: 1.9460, Accuracy: 9003/12000 (75%)
+Took 275.72958278656006 seconds.
+Test set: Average loss: 2.0189, Top-1 Accuracy: 4383/6000 (73.0500%)
+Took 276.7667381763458 seconds.
+Test set: Average loss: 2.0189, Top-5 Accuracy: 5938.0/6000 (98.9667%)
+Took 276.7667381763458 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.109382
+Train set: Average loss: 0.0933
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.8761, Accuracy: 9182/12000 (77%)
+Took 292.2389440536499 seconds.
+Test set: Average loss: 1.8989, Top-1 Accuracy: 4489/6000 (74.8167%)
+Took 293.21446537971497 seconds.
+Test set: Average loss: 1.8989, Top-5 Accuracy: 5962.0/6000 (99.3667%)
+Took 293.21446537971497 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.063526
+Train set: Average loss: 0.0797
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.7311, Accuracy: 9203/12000 (77%)
+Took 308.4861145019531 seconds.
+Test set: Average loss: 1.8592, Top-1 Accuracy: 4410/6000 (73.5000%)
+Took 309.4610917568207 seconds.
+Test set: Average loss: 1.8592, Top-5 Accuracy: 5965.0/6000 (99.4167%)
+Took 309.4610917568207 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.054749
+Train set: Average loss: 0.0710
+Valid set: Average loss: 1.7265, Accuracy: 9115/12000 (76%)
+Took 324.7537007331848 seconds.
+Test set: Average loss: 1.6670, Top-1 Accuracy: 4501/6000 (75.0167%)
+Took 325.7409157752991 seconds.
+Test set: Average loss: 1.6670, Top-5 Accuracy: 5950.0/6000 (99.1667%)
+Took 325.7409157752991 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.071260
+Train set: Average loss: 0.0591
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.7423, Accuracy: 9261/12000 (77%)
+Took 341.0377790927887 seconds.
+Test set: Average loss: 1.4791, Top-1 Accuracy: 4681/6000 (78.0167%)
+Took 342.038934469223 seconds.
+Test set: Average loss: 1.4791, Top-5 Accuracy: 5953.0/6000 (99.2167%)
+Took 342.038934469223 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.044477
+Train set: Average loss: 0.0479
+Valid set: Average loss: 2.0399, Accuracy: 9070/12000 (76%)
+Took 357.39347791671753 seconds.
+Test set: Average loss: 2.0208, Top-1 Accuracy: 4459/6000 (74.3167%)
+Took 358.3906219005585 seconds.
+Test set: Average loss: 2.0208, Top-5 Accuracy: 5933.0/6000 (98.8833%)
+Took 358.3906219005585 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.053721
+Train set: Average loss: 0.0579
+Valid set: Average loss: 1.8588, Accuracy: 9153/12000 (76%)
+Took 374.0178918838501 seconds.
+Test set: Average loss: 1.5639, Top-1 Accuracy: 4682/6000 (78.0333%)
+Took 375.0163531303406 seconds.
+Test set: Average loss: 1.5639, Top-5 Accuracy: 5938.0/6000 (98.9667%)
+Took 375.0163531303406 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.047691
+Train set: Average loss: 0.0494
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.5840, Accuracy: 9532/12000 (79%)
+Took 390.64156341552734 seconds.
+Test set: Average loss: 1.4777, Top-1 Accuracy: 4776/6000 (79.6000%)
+Took 391.64339089393616 seconds.
+Test set: Average loss: 1.4777, Top-5 Accuracy: 5914.0/6000 (98.5667%)
+Took 391.64339089393616 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.063976
+Train set: Average loss: 0.0532
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.3000, Accuracy: 9724/12000 (81%)
+Took 407.27249121665955 seconds.
+Test set: Average loss: 1.1785, Top-1 Accuracy: 4882/6000 (81.3667%)
+Took 408.2703757286072 seconds.
+Test set: Average loss: 1.1785, Top-5 Accuracy: 5942.0/6000 (99.0333%)
+Took 408.2703757286072 seconds.
+
+----- Layer 1, Node 1, Epoch 24/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.062911
+Train set: Average loss: 0.0545
+Valid set: Average loss: 1.8453, Accuracy: 9327/12000 (78%)
+Took 423.8005635738373 seconds.
+Test set: Average loss: 2.0836, Top-1 Accuracy: 4508/6000 (75.1333%)
+Took 424.7986264228821 seconds.
+Test set: Average loss: 2.0836, Top-5 Accuracy: 5941.0/6000 (99.0167%)
+Took 424.7986264228821 seconds.
+
+----- Layer 1, Node 1, Epoch 25/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.046596
+Train set: Average loss: 0.0528
+Valid set: Average loss: 2.2044, Accuracy: 8723/12000 (73%)
+Took 440.1802203655243 seconds.
+Test set: Average loss: 2.0883, Top-1 Accuracy: 4368/6000 (72.8000%)
+Took 441.18308544158936 seconds.
+Test set: Average loss: 2.0883, Top-5 Accuracy: 5899.0/6000 (98.3167%)
+Took 441.18308544158936 seconds.
+
+----- Layer 1, Node 1, Epoch 26/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.006879
+Train set: Average loss: 0.0247
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.3967, Accuracy: 9761/12000 (81%)
+Took 456.76635122299194 seconds.
+Test set: Average loss: 1.1762, Top-1 Accuracy: 4967/6000 (82.7833%)
+Took 457.7834861278534 seconds.
+Test set: Average loss: 1.1762, Top-5 Accuracy: 5964.0/6000 (99.4000%)
+Took 457.7834861278534 seconds.
+
+----- Layer 1, Node 1, Epoch 27/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.002317
+Train set: Average loss: 0.0061
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.4122, Accuracy: 9818/12000 (82%)
+Took 473.1434602737427 seconds.
+Test set: Average loss: 1.2645, Top-1 Accuracy: 4947/6000 (82.4500%)
+Took 474.12730646133423 seconds.
+Test set: Average loss: 1.2645, Top-5 Accuracy: 5967.0/6000 (99.4500%)
+Took 474.12730646133423 seconds.
+
+----- Layer 1, Node 1, Epoch 28/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.001052
+Train set: Average loss: 0.0031
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.4828, Accuracy: 9828/12000 (82%)
+Took 489.55411672592163 seconds.
+Test set: Average loss: 1.3341, Top-1 Accuracy: 4952/6000 (82.5333%)
+Took 490.5371448993683 seconds.
+Test set: Average loss: 1.3341, Top-5 Accuracy: 5960.0/6000 (99.3333%)
+Took 490.5371448993683 seconds.
+
+----- Layer 1, Node 1, Epoch 29/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.000739
+Train set: Average loss: 0.0023
+Valid set: Average loss: 1.5802, Accuracy: 9783/12000 (82%)
+Took 506.5353090763092 seconds.
+Test set: Average loss: 1.4430, Top-1 Accuracy: 4916/6000 (81.9333%)
+Took 507.57426595687866 seconds.
+Test set: Average loss: 1.4430, Top-5 Accuracy: 5960.0/6000 (99.3333%)
+Took 507.57426595687866 seconds.
+
+----- Layer 1, Node 1, Epoch 30/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.000539
+Train set: Average loss: 0.0022
+Valid set: Average loss: 1.6040, Accuracy: 9798/12000 (82%)
+Took 523.2997660636902 seconds.
+Test set: Average loss: 1.4733, Top-1 Accuracy: 4917/6000 (81.9500%)
+Took 524.281256198883 seconds.
+Test set: Average loss: 1.4733, Top-5 Accuracy: 5958.0/6000 (99.3000%)
+Took 524.281256198883 seconds.
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.3341, Top-1 Accuracy: 4952/6000 (82.5333%)
+Took 525.2882008552551 seconds.
+Test set: Average loss: 1.3341, Top-5 Accuracy: 5960.0/6000 (99.3333%)
+Took 525.2882008552551 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 1.1845, Top-1 Accuracy: 4994/6000 (83.2333%)
+Took 526.1392521858215 seconds.
+Test set: Average loss: 1.1845, Top-5 Accuracy: 5940.0/6000 (99.0000%)
+Took 526.1392521858215 seconds.
+Test set: Average loss: 1.3341, Top-1 Accuracy: 4952/6000 (82.5333%)
+Took 527.121853351593 seconds.
+Test set: Average loss: 1.3341, Top-5 Accuracy: 5960.0/6000 (99.3333%)
+Took 527.121853351593 seconds.
+
+Average Top-1 accuracy: tensor(82.8833)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812]
+----- Top5 acc: [99.71666717529297, 99.16667175292969]
+============== Continual learning on task 2 =================
+
+[before adaption and growth]
+Test set: Average loss: 5.1534, Top-1 Accuracy: 1783/6000 (29.7167%)
+Took 528.6424472332001 seconds.
+Test set: Average loss: 5.1534, Top-5 Accuracy: 5249.0/6000 (87.4833%)
+Took 528.6424472332001 seconds.
+old_data shape: torch.Size([20000, 3072])
+new_data_1 shape: torch.Size([20000, 3072])
+MMD loss:tensor(1.3463, device='cuda:0')
+
+ ------------ start adaptation .............
+--------- Task 2, DA Epoch 1/15 ---------
+              [17920/30000 (0%)]      Loss: 8.454102
+Train set: Average loss: 5.0501
+Test set: Average loss: 5.8325, Top-1 Accuracy: 1984/6000 (33.0667%)
+Took 551.0114047527313 seconds.
+Test set: Average loss: 5.8325, Top-5 Accuracy: 5428.0/6000 (90.4667%)
+Took 551.0114047527313 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 2, DA Epoch 2/15 ---------
+              [17920/30000 (0%)]      Loss: 8.344267
+Train set: Average loss: 4.9522
+Test set: Average loss: 5.8103, Top-1 Accuracy: 1991/6000 (33.1833%)
+Took 563.5569355487823 seconds.
+Test set: Average loss: 5.8103, Top-5 Accuracy: 5415.0/6000 (90.2500%)
+Took 563.5569355487823 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 2, DA Epoch 3/15 ---------
+              [17920/30000 (0%)]      Loss: 8.252104
+Train set: Average loss: 4.8664
+Test set: Average loss: 5.8657, Top-1 Accuracy: 1967/6000 (32.7833%)
+Took 576.1207344532013 seconds.
+Test set: Average loss: 5.8657, Top-5 Accuracy: 5388.0/6000 (89.8000%)
+Took 576.1207344532013 seconds.
+--------- Task 2, DA Epoch 4/15 ---------
+              [17920/30000 (0%)]      Loss: 8.164123
+Train set: Average loss: 4.7869
+Test set: Average loss: 6.0006, Top-1 Accuracy: 1954/6000 (32.5667%)
+Took 588.6549077033997 seconds.
+Test set: Average loss: 6.0006, Top-5 Accuracy: 5364.0/6000 (89.4000%)
+Took 588.6549077033997 seconds.
+--------- Task 2, DA Epoch 5/15 ---------
+              [17920/30000 (0%)]      Loss: 8.087029
+Train set: Average loss: 4.7127
+Test set: Average loss: 6.2133, Top-1 Accuracy: 1901/6000 (31.6833%)
+Took 601.2058620452881 seconds.
+Test set: Average loss: 6.2133, Top-5 Accuracy: 5349.0/6000 (89.1500%)
+Took 601.2058620452881 seconds.
+--------- Task 2, DA Epoch 6/15 ---------
+              [17920/30000 (0%)]      Loss: 8.010860
+Train set: Average loss: 4.6410
+Test set: Average loss: 6.4969, Top-1 Accuracy: 1850/6000 (30.8333%)
+Took 613.7825837135315 seconds.
+Test set: Average loss: 6.4969, Top-5 Accuracy: 5298.0/6000 (88.3000%)
+Took 613.7825837135315 seconds.
+--------- Task 2, DA Epoch 7/15 ---------
+              [17920/30000 (0%)]      Loss: 7.940997
+Train set: Average loss: 4.5720
+Test set: Average loss: 6.8603, Top-1 Accuracy: 1786/6000 (29.7667%)
+Took 626.2912392616272 seconds.
+Test set: Average loss: 6.8603, Top-5 Accuracy: 5262.0/6000 (87.7000%)
+Took 626.2912392616272 seconds.
+--------- Task 2, DA Epoch 8/15 ---------
+              [17920/30000 (0%)]      Loss: 7.870587
+Train set: Average loss: 4.5065
+Test set: Average loss: 7.2181, Top-1 Accuracy: 1715/6000 (28.5833%)
+Took 638.873143196106 seconds.
+Test set: Average loss: 7.2181, Top-5 Accuracy: 5226.0/6000 (87.1000%)
+Took 638.873143196106 seconds.
+--------- Task 2, DA Epoch 9/15 ---------
+              [17920/30000 (0%)]      Loss: 7.796425
+Train set: Average loss: 4.4426
+Test set: Average loss: 7.6163, Top-1 Accuracy: 1667/6000 (27.7833%)
+Took 651.441926240921 seconds.
+Test set: Average loss: 7.6163, Top-5 Accuracy: 5184.0/6000 (86.4000%)
+Took 651.441926240921 seconds.
+--------- Task 2, DA Epoch 10/15 ---------
+              [17920/30000 (0%)]      Loss: 7.726560
+Train set: Average loss: 4.3810
+Test set: Average loss: 7.9727, Top-1 Accuracy: 1631/6000 (27.1833%)
+Took 663.9502003192902 seconds.
+Test set: Average loss: 7.9727, Top-5 Accuracy: 5131.0/6000 (85.5167%)
+Took 663.9502003192902 seconds.
+--------- Task 2, DA Epoch 11/15 ---------
+              [17920/30000 (0%)]      Loss: 7.665090
+Train set: Average loss: 4.3244
+Test set: Average loss: 8.3128, Top-1 Accuracy: 1593/6000 (26.5500%)
+Took 676.5150902271271 seconds.
+Test set: Average loss: 8.3128, Top-5 Accuracy: 5093.0/6000 (84.8833%)
+Took 676.5150902271271 seconds.
+--------- Task 2, DA Epoch 12/15 ---------
+              [17920/30000 (0%)]      Loss: 7.609947
+Train set: Average loss: 4.2722
+Test set: Average loss: 8.6033, Top-1 Accuracy: 1569/6000 (26.1500%)
+Took 689.0650861263275 seconds.
+Test set: Average loss: 8.6033, Top-5 Accuracy: 5045.0/6000 (84.0833%)
+Took 689.0650861263275 seconds.
+--------- Task 2, DA Epoch 13/15 ---------
+              [17920/30000 (0%)]      Loss: 7.560243
+Train set: Average loss: 4.2239
+Test set: Average loss: 8.8288, Top-1 Accuracy: 1548/6000 (25.8000%)
+Took 701.5644705295563 seconds.
+Test set: Average loss: 8.8288, Top-5 Accuracy: 5001.0/6000 (83.3500%)
+Took 701.5644705295563 seconds.
+--------- Task 2, DA Epoch 14/15 ---------
+              [17920/30000 (0%)]      Loss: 7.511267
+Train set: Average loss: 4.1793
+Test set: Average loss: 9.0772, Top-1 Accuracy: 1528/6000 (25.4667%)
+Took 714.116206407547 seconds.
+Test set: Average loss: 9.0772, Top-5 Accuracy: 4984.0/6000 (83.0667%)
+Took 714.116206407547 seconds.
+--------- Task 2, DA Epoch 15/15 ---------
+              [17920/30000 (0%)]      Loss: 7.464355
+Train set: Average loss: 4.1374
+Test set: Average loss: 9.2449, Top-1 Accuracy: 1512/6000 (25.2000%)
+Took 726.6756267547607 seconds.
+Test set: Average loss: 9.2449, Top-5 Accuracy: 4975.0/6000 (82.9167%)
+Took 726.6756267547607 seconds.
+[after adaption and growth]
+Test set: Average loss: 5.8103, Top-1 Accuracy: 1991/6000 (33.1833%)
+Took 728.1442005634308 seconds.
+Test set: Average loss: 5.8103, Top-5 Accuracy: 5415.0/6000 (90.2500%)
+Took 728.1442005634308 seconds.
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 5.8103, Top-1 Accuracy: 1991/6000 (33.1833%)
+Took 731.104246377945 seconds.
+Test set: Average loss: 5.8103, Top-5 Accuracy: 5415.0/6000 (90.2500%)
+Took 731.104246377945 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.900095
+Train set: Average loss: 1.1730
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 3.2667, Accuracy: 9085/18000 (50%)
+Took 750.6393713951111 seconds.
+Test set: Average loss: 1.1899, Top-1 Accuracy: 3868/6000 (64.4667%)
+Took 752.0350208282471 seconds.
+Test set: Average loss: 1.1899, Top-5 Accuracy: 5939.0/6000 (98.9833%)
+Took 752.0350208282471 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.722906
+Train set: Average loss: 0.7676
+Valid set: Average loss: 3.9161, Accuracy: 8913/18000 (50%)
+Took 772.0776607990265 seconds.
+Test set: Average loss: 1.2175, Top-1 Accuracy: 3957/6000 (65.9500%)
+Took 773.540935754776 seconds.
+Test set: Average loss: 1.2175, Top-5 Accuracy: 5943.0/6000 (99.0500%)
+Took 773.540935754776 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.619882
+Train set: Average loss: 0.6427
+Valid set: Average loss: 4.6726, Accuracy: 8352/18000 (46%)
+Took 793.3357646465302 seconds.
+Test set: Average loss: 1.3256, Top-1 Accuracy: 3946/6000 (65.7667%)
+Took 794.7927362918854 seconds.
+Test set: Average loss: 1.3256, Top-5 Accuracy: 5944.0/6000 (99.0667%)
+Took 794.7927362918854 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.555168
+Train set: Average loss: 0.5680
+Valid set: Average loss: 5.3241, Accuracy: 7736/18000 (43%)
+Took 814.4503157138824 seconds.
+Test set: Average loss: 1.3688, Top-1 Accuracy: 3940/6000 (65.6667%)
+Took 815.8936352729797 seconds.
+Test set: Average loss: 1.3688, Top-5 Accuracy: 5938.0/6000 (98.9667%)
+Took 815.8936352729797 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.467488
+Train set: Average loss: 0.5017
+Valid set: Average loss: 5.9439, Accuracy: 7817/18000 (43%)
+Took 835.5358748435974 seconds.
+Test set: Average loss: 1.2293, Top-1 Accuracy: 4191/6000 (69.8500%)
+Took 837.011340379715 seconds.
+Test set: Average loss: 1.2293, Top-5 Accuracy: 5928.0/6000 (98.8000%)
+Took 837.011340379715 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.423834
+Train set: Average loss: 0.4449
+Valid set: Average loss: 5.7948, Accuracy: 8254/18000 (46%)
+Took 856.644711971283 seconds.
+Test set: Average loss: 1.3153, Top-1 Accuracy: 4116/6000 (68.6000%)
+Took 858.0926258563995 seconds.
+Test set: Average loss: 1.3153, Top-5 Accuracy: 5938.0/6000 (98.9667%)
+Took 858.0926258563995 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.418623
+Train set: Average loss: 0.4212
+Valid set: Average loss: 6.8576, Accuracy: 7108/18000 (39%)
+Took 877.7098064422607 seconds.
+Test set: Average loss: 2.0161, Top-1 Accuracy: 3705/6000 (61.7500%)
+Took 879.1524558067322 seconds.
+Test set: Average loss: 2.0161, Top-5 Accuracy: 5836.0/6000 (97.2667%)
+Took 879.1524558067322 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.363432
+Train set: Average loss: 0.3879
+Valid set: Average loss: 8.2421, Accuracy: 7061/18000 (39%)
+Took 898.7615587711334 seconds.
+Test set: Average loss: 2.4928, Top-1 Accuracy: 3493/6000 (58.2167%)
+Took 900.2042574882507 seconds.
+Test set: Average loss: 2.4928, Top-5 Accuracy: 5839.0/6000 (97.3167%)
+Took 900.2042574882507 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.338848
+Train set: Average loss: 0.3576
+Valid set: Average loss: 9.2193, Accuracy: 6883/18000 (38%)
+Took 919.7991616725922 seconds.
+Test set: Average loss: 2.3572, Top-1 Accuracy: 3622/6000 (60.3667%)
+Took 921.242161989212 seconds.
+Test set: Average loss: 2.3572, Top-5 Accuracy: 5833.0/6000 (97.2167%)
+Took 921.242161989212 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.300424
+Train set: Average loss: 0.3277
+Valid set: Average loss: 6.5332, Accuracy: 7885/18000 (44%)
+Took 940.83540391922 seconds.
+Test set: Average loss: 2.1625, Top-1 Accuracy: 3635/6000 (60.5833%)
+Took 942.2774965763092 seconds.
+Test set: Average loss: 2.1625, Top-5 Accuracy: 5802.0/6000 (96.7000%)
+Took 942.2774965763092 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.284749
+Train set: Average loss: 0.3097
+Valid set: Average loss: 7.0760, Accuracy: 8280/18000 (46%)
+Took 961.9738922119141 seconds.
+Test set: Average loss: 1.7264, Top-1 Accuracy: 4006/6000 (66.7667%)
+Took 963.4221606254578 seconds.
+Test set: Average loss: 1.7264, Top-5 Accuracy: 5878.0/6000 (97.9667%)
+Took 963.4221606254578 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.284456
+Train set: Average loss: 0.2866
+Valid set: Average loss: 5.3342, Accuracy: 8753/18000 (49%)
+Took 983.0443346500397 seconds.
+Test set: Average loss: 1.9553, Top-1 Accuracy: 3806/6000 (63.4333%)
+Took 984.4881601333618 seconds.
+Test set: Average loss: 1.9553, Top-5 Accuracy: 5861.0/6000 (97.6833%)
+Took 984.4881601333618 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.220009
+Train set: Average loss: 0.2650
+Valid set: Average loss: 7.5525, Accuracy: 7058/18000 (39%)
+Took 1004.1881859302521 seconds.
+Test set: Average loss: 2.7723, Top-1 Accuracy: 3455/6000 (57.5833%)
+Took 1005.6305205821991 seconds.
+Test set: Average loss: 2.7723, Top-5 Accuracy: 5797.0/6000 (96.6167%)
+Took 1005.6305205821991 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.246681
+Train set: Average loss: 0.2743
+Valid set: Average loss: 7.9842, Accuracy: 7560/18000 (42%)
+Took 1025.2809336185455 seconds.
+Test set: Average loss: 1.7387, Top-1 Accuracy: 3986/6000 (66.4333%)
+Took 1026.7563498020172 seconds.
+Test set: Average loss: 1.7387, Top-5 Accuracy: 5875.0/6000 (97.9167%)
+Took 1026.7563498020172 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.271546
+Train set: Average loss: 0.2439
+Valid set: Average loss: 7.8777, Accuracy: 7294/18000 (41%)
+Took 1046.1486339569092 seconds.
+Test set: Average loss: 2.4309, Top-1 Accuracy: 3580/6000 (59.6667%)
+Took 1047.5530495643616 seconds.
+Test set: Average loss: 2.4309, Top-5 Accuracy: 5800.0/6000 (96.6667%)
+Took 1047.5530495643616 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.260544
+Train set: Average loss: 0.2311
+Valid set: Average loss: 6.3353, Accuracy: 7855/18000 (44%)
+Took 1066.3480608463287 seconds.
+Test set: Average loss: 2.1936, Top-1 Accuracy: 3568/6000 (59.4667%)
+Took 1067.7432203292847 seconds.
+Test set: Average loss: 2.1936, Top-5 Accuracy: 5802.0/6000 (96.7000%)
+Took 1067.7432203292847 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.226282
+Train set: Average loss: 0.1946
+Valid set: Average loss: 6.7405, Accuracy: 8455/18000 (47%)
+Took 1086.6811318397522 seconds.
+Test set: Average loss: 2.4934, Top-1 Accuracy: 3803/6000 (63.3833%)
+Took 1088.0913348197937 seconds.
+Test set: Average loss: 2.4934, Top-5 Accuracy: 5834.0/6000 (97.2333%)
+Took 1088.0913348197937 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.200953
+Train set: Average loss: 0.1763
+Valid set: Average loss: 6.4200, Accuracy: 7988/18000 (44%)
+Took 1107.0894770622253 seconds.
+Test set: Average loss: 2.3324, Top-1 Accuracy: 3721/6000 (62.0167%)
+Took 1108.4908020496368 seconds.
+Test set: Average loss: 2.3324, Top-5 Accuracy: 5836.0/6000 (97.2667%)
+Took 1108.4908020496368 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.165333
+Train set: Average loss: 0.1685
+Valid set: Average loss: 6.5891, Accuracy: 7960/18000 (44%)
+Took 1127.5751512050629 seconds.
+Test set: Average loss: 2.1623, Top-1 Accuracy: 3833/6000 (63.8833%)
+Took 1128.9743757247925 seconds.
+Test set: Average loss: 2.1623, Top-5 Accuracy: 5815.0/6000 (96.9167%)
+Took 1128.9743757247925 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.149057
+Train set: Average loss: 0.1559
+Valid set: Average loss: 8.0172, Accuracy: 7203/18000 (40%)
+Took 1148.062626838684 seconds.
+Test set: Average loss: 2.8629, Top-1 Accuracy: 3458/6000 (57.6333%)
+Took 1149.4671275615692 seconds.
+Test set: Average loss: 2.8629, Top-5 Accuracy: 5785.0/6000 (96.4167%)
+Took 1149.4671275615692 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.157411
+Train set: Average loss: 0.1505
+Valid set: Average loss: 8.4044, Accuracy: 7713/18000 (43%)
+Took 1168.571490764618 seconds.
+Test set: Average loss: 2.3962, Top-1 Accuracy: 3906/6000 (65.1000%)
+Took 1169.9725048542023 seconds.
+Test set: Average loss: 2.3962, Top-5 Accuracy: 5801.0/6000 (96.6833%)
+Took 1169.9725048542023 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.133265
+Train set: Average loss: 0.1475
+Valid set: Average loss: 6.4619, Accuracy: 8164/18000 (45%)
+Took 1189.658634185791 seconds.
+Test set: Average loss: 2.3285, Top-1 Accuracy: 3785/6000 (63.0833%)
+Took 1191.1203308105469 seconds.
+Test set: Average loss: 2.3285, Top-5 Accuracy: 5764.0/6000 (96.0667%)
+Took 1191.1203308105469 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.149360
+Train set: Average loss: 0.1428
+Valid set: Average loss: 7.3135, Accuracy: 8209/18000 (46%)
+Took 1210.2536733150482 seconds.
+Test set: Average loss: 2.0360, Top-1 Accuracy: 4007/6000 (66.7833%)
+Took 1211.6575858592987 seconds.
+Test set: Average loss: 2.0360, Top-5 Accuracy: 5813.0/6000 (96.8833%)
+Took 1211.6575858592987 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.1899, Top-1 Accuracy: 3868/6000 (64.4667%)
+Took 1213.0809121131897 seconds.
+Test set: Average loss: 1.1899, Top-5 Accuracy: 5939.0/6000 (98.9833%)
+Took 1213.0809121131897 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 1.0952, Top-1 Accuracy: 4747/6000 (79.1167%)
+Took 1213.9353711605072 seconds.
+Test set: Average loss: 1.0952, Top-5 Accuracy: 5737.0/6000 (95.6167%)
+Took 1213.9353711605072 seconds.
+Test set: Average loss: 0.5876, Top-1 Accuracy: 5077/6000 (84.6167%)
+Took 1214.9254870414734 seconds.
+Test set: Average loss: 0.5876, Top-5 Accuracy: 5915.0/6000 (98.5833%)
+Took 1214.9254870414734 seconds.
+Test set: Average loss: 1.1899, Top-1 Accuracy: 3868/6000 (64.4667%)
+Took 1216.3471143245697 seconds.
+Test set: Average loss: 1.1899, Top-5 Accuracy: 5939.0/6000 (98.9833%)
+Took 1216.3471143245697 seconds.
+
+Average Top-1 accuracy: tensor(76.0667)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125]
+============== Continual learning on task 3 =================
+
+[before adaption and growth]
+Test set: Average loss: 2.2629, Top-1 Accuracy: 2700/6000 (45.0000%)
+Took 1218.5644583702087 seconds.
+Test set: Average loss: 2.2629, Top-5 Accuracy: 5584.0/6000 (93.0667%)
+Took 1218.5644583702087 seconds.
+old_data shape: torch.Size([15000, 3072])
+new_data_1 shape: torch.Size([15000, 3072])
+MMD loss:tensor(0.1536, device='cuda:0')
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 2.2629, Top-1 Accuracy: 2700/6000 (45.0000%)
+Took 1231.5648086071014 seconds.
+Test set: Average loss: 2.2629, Top-5 Accuracy: 5584.0/6000 (93.0667%)
+Took 1231.5648086071014 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.729223
+Train set: Average loss: 0.8927
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.5428, Accuracy: 14845/24000 (62%)
+Took 1256.218070268631 seconds.
+Test set: Average loss: 1.4025, Top-1 Accuracy: 3902/6000 (65.0333%)
+Took 1258.2330510616302 seconds.
+Test set: Average loss: 1.4025, Top-5 Accuracy: 5810.0/6000 (96.8333%)
+Took 1258.2330510616302 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.551880
+Train set: Average loss: 0.5967
+Valid set: Average loss: 1.8158, Accuracy: 14638/24000 (61%)
+Took 1282.8312425613403 seconds.
+Test set: Average loss: 1.7390, Top-1 Accuracy: 3771/6000 (62.8500%)
+Took 1284.8324630260468 seconds.
+Test set: Average loss: 1.7390, Top-5 Accuracy: 5744.0/6000 (95.7333%)
+Took 1284.8324630260468 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.443180
+Train set: Average loss: 0.4678
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.8560, Accuracy: 15310/24000 (64%)
+Took 1309.513151884079 seconds.
+Test set: Average loss: 1.8036, Top-1 Accuracy: 4028/6000 (67.1333%)
+Took 1311.5318517684937 seconds.
+Test set: Average loss: 1.8036, Top-5 Accuracy: 5798.0/6000 (96.6333%)
+Took 1311.5318517684937 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.377624
+Train set: Average loss: 0.3898
+Valid set: Average loss: 2.1157, Accuracy: 14855/24000 (62%)
+Took 1336.1744511127472 seconds.
+Test set: Average loss: 2.0876, Top-1 Accuracy: 3925/6000 (65.4167%)
+Took 1338.1754190921783 seconds.
+Test set: Average loss: 2.0876, Top-5 Accuracy: 5764.0/6000 (96.0667%)
+Took 1338.1754190921783 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.310621
+Train set: Average loss: 0.3358
+Valid set: Average loss: 2.0853, Accuracy: 14574/24000 (61%)
+Took 1362.7871191501617 seconds.
+Test set: Average loss: 1.3544, Top-1 Accuracy: 4282/6000 (71.3667%)
+Took 1364.7850029468536 seconds.
+Test set: Average loss: 1.3544, Top-5 Accuracy: 5836.0/6000 (97.2667%)
+Took 1364.7850029468536 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.302479
+Train set: Average loss: 0.2966
+Valid set: Average loss: 2.1299, Accuracy: 14899/24000 (62%)
+Took 1389.3891479969025 seconds.
+Test set: Average loss: 1.2943, Top-1 Accuracy: 4375/6000 (72.9167%)
+Took 1391.4600064754486 seconds.
+Test set: Average loss: 1.2943, Top-5 Accuracy: 5866.0/6000 (97.7667%)
+Took 1391.4600064754486 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.253442
+Train set: Average loss: 0.2476
+Valid set: Average loss: 2.3060, Accuracy: 14292/24000 (60%)
+Took 1417.0723106861115 seconds.
+Test set: Average loss: 1.5475, Top-1 Accuracy: 4167/6000 (69.4500%)
+Took 1419.163719177246 seconds.
+Test set: Average loss: 1.5475, Top-5 Accuracy: 5855.0/6000 (97.5833%)
+Took 1419.163719177246 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.248921
+Train set: Average loss: 0.2270
+Valid set: Average loss: 2.5578, Accuracy: 14310/24000 (60%)
+Took 1443.80810880661 seconds.
+Test set: Average loss: 1.5788, Top-1 Accuracy: 4312/6000 (71.8667%)
+Took 1445.8471257686615 seconds.
+Test set: Average loss: 1.5788, Top-5 Accuracy: 5858.0/6000 (97.6333%)
+Took 1445.8471257686615 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.190476
+Train set: Average loss: 0.2178
+Valid set: Average loss: 3.3174, Accuracy: 12665/24000 (53%)
+Took 1470.5084581375122 seconds.
+Test set: Average loss: 2.4697, Top-1 Accuracy: 3743/6000 (62.3833%)
+Took 1472.5187876224518 seconds.
+Test set: Average loss: 2.4697, Top-5 Accuracy: 5792.0/6000 (96.5333%)
+Took 1472.5187876224518 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.185060
+Train set: Average loss: 0.2228
+Valid set: Average loss: 2.6271, Accuracy: 14535/24000 (61%)
+Took 1497.288120508194 seconds.
+Test set: Average loss: 2.4876, Top-1 Accuracy: 3866/6000 (64.4333%)
+Took 1499.3107495307922 seconds.
+Test set: Average loss: 2.4876, Top-5 Accuracy: 5713.0/6000 (95.2167%)
+Took 1499.3107495307922 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.191416
+Train set: Average loss: 0.2139
+Valid set: Average loss: 2.3707, Accuracy: 14558/24000 (61%)
+Took 1524.2609179019928 seconds.
+Test set: Average loss: 1.9626, Top-1 Accuracy: 4084/6000 (68.0667%)
+Took 1526.3161590099335 seconds.
+Test set: Average loss: 1.9626, Top-5 Accuracy: 5736.0/6000 (95.6000%)
+Took 1526.3161590099335 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.164534
+Train set: Average loss: 0.1978
+Valid set: Average loss: 2.2583, Accuracy: 14951/24000 (62%)
+Took 1551.1697766780853 seconds.
+Test set: Average loss: 1.7001, Top-1 Accuracy: 4180/6000 (69.6667%)
+Took 1553.1872963905334 seconds.
+Test set: Average loss: 1.7001, Top-5 Accuracy: 5755.0/6000 (95.9167%)
+Took 1553.1872963905334 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.134243
+Train set: Average loss: 0.1742
+Valid set: Average loss: 2.3105, Accuracy: 14894/24000 (62%)
+Took 1578.074043750763 seconds.
+Test set: Average loss: 1.8936, Top-1 Accuracy: 4095/6000 (68.2500%)
+Took 1580.118533372879 seconds.
+Test set: Average loss: 1.8936, Top-5 Accuracy: 5782.0/6000 (96.3667%)
+Took 1580.118533372879 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.108961
+Train set: Average loss: 0.1325
+Valid set: Average loss: 2.8260, Accuracy: 14347/24000 (60%)
+Took 1604.987450838089 seconds.
+Test set: Average loss: 2.5497, Top-1 Accuracy: 3920/6000 (65.3333%)
+Took 1607.034986257553 seconds.
+Test set: Average loss: 2.5497, Top-5 Accuracy: 5727.0/6000 (95.4500%)
+Took 1607.034986257553 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.108090
+Train set: Average loss: 0.1105
+Valid set: Average loss: 2.6591, Accuracy: 14640/24000 (61%)
+Took 1632.5828144550323 seconds.
+Test set: Average loss: 2.5597, Top-1 Accuracy: 4048/6000 (67.4667%)
+Took 1634.7176899909973 seconds.
+Test set: Average loss: 2.5597, Top-5 Accuracy: 5680.0/6000 (94.6667%)
+Took 1634.7176899909973 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.094962
+Train set: Average loss: 0.1139
+Valid set: Average loss: 2.5209, Accuracy: 14743/24000 (61%)
+Took 1659.6563687324524 seconds.
+Test set: Average loss: 2.1256, Top-1 Accuracy: 4196/6000 (69.9333%)
+Took 1661.682698249817 seconds.
+Test set: Average loss: 2.1256, Top-5 Accuracy: 5779.0/6000 (96.3167%)
+Took 1661.682698249817 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.087386
+Train set: Average loss: 0.1053
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.3061, Accuracy: 15406/24000 (64%)
+Took 1686.5326771736145 seconds.
+Test set: Average loss: 1.6956, Top-1 Accuracy: 4382/6000 (73.0333%)
+Took 1688.5562648773193 seconds.
+Test set: Average loss: 1.6956, Top-5 Accuracy: 5866.0/6000 (97.7667%)
+Took 1688.5562648773193 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.102554
+Train set: Average loss: 0.0853
+Valid set: Average loss: 2.7638, Accuracy: 14697/24000 (61%)
+Took 1713.454929113388 seconds.
+Test set: Average loss: 2.7458, Top-1 Accuracy: 4019/6000 (66.9833%)
+Took 1715.4740331172943 seconds.
+Test set: Average loss: 2.7458, Top-5 Accuracy: 5747.0/6000 (95.7833%)
+Took 1715.4740331172943 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.065989
+Train set: Average loss: 0.0824
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.3950, Accuracy: 15728/24000 (66%)
+Took 1740.294472694397 seconds.
+Test set: Average loss: 2.2390, Top-1 Accuracy: 4206/6000 (70.1000%)
+Took 1742.314859867096 seconds.
+Test set: Average loss: 2.2390, Top-5 Accuracy: 5740.0/6000 (95.6667%)
+Took 1742.314859867096 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.068419
+Train set: Average loss: 0.0765
+Valid set: Average loss: 2.8049, Accuracy: 14993/24000 (62%)
+Took 1767.1108736991882 seconds.
+Test set: Average loss: 2.6754, Top-1 Accuracy: 4036/6000 (67.2667%)
+Took 1769.165515422821 seconds.
+Test set: Average loss: 2.6754, Top-5 Accuracy: 5718.0/6000 (95.3000%)
+Took 1769.165515422821 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.077724
+Train set: Average loss: 0.0773
+Valid set: Average loss: 2.5837, Accuracy: 15500/24000 (65%)
+Took 1794.0150661468506 seconds.
+Test set: Average loss: 2.3536, Top-1 Accuracy: 4167/6000 (69.4500%)
+Took 1796.0327498912811 seconds.
+Test set: Average loss: 2.3536, Top-5 Accuracy: 5810.0/6000 (96.8333%)
+Took 1796.0327498912811 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.061575
+Train set: Average loss: 0.0656
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.3613, Accuracy: 15904/24000 (66%)
+Took 1820.8006374835968 seconds.
+Test set: Average loss: 2.2148, Top-1 Accuracy: 4251/6000 (70.8500%)
+Took 1822.8223967552185 seconds.
+Test set: Average loss: 2.2148, Top-5 Accuracy: 5807.0/6000 (96.7833%)
+Took 1822.8223967552185 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.062298
+Train set: Average loss: 0.0658
+Valid set: Average loss: 2.6596, Accuracy: 15317/24000 (64%)
+Took 1847.6849455833435 seconds.
+Test set: Average loss: 2.4028, Top-1 Accuracy: 4120/6000 (68.6667%)
+Took 1849.718693971634 seconds.
+Test set: Average loss: 2.4028, Top-5 Accuracy: 5703.0/6000 (95.0500%)
+Took 1849.718693971634 seconds.
+
+----- Layer 1, Node 1, Epoch 24/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.066297
+Train set: Average loss: 0.0687
+Valid set: Average loss: 2.8156, Accuracy: 14781/24000 (62%)
+Took 1874.5512480735779 seconds.
+Test set: Average loss: 1.9130, Top-1 Accuracy: 4385/6000 (73.0833%)
+Took 1876.5752058029175 seconds.
+Test set: Average loss: 1.9130, Top-5 Accuracy: 5835.0/6000 (97.2500%)
+Took 1876.5752058029175 seconds.
+
+----- Layer 1, Node 1, Epoch 25/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.060644
+Train set: Average loss: 0.0744
+Valid set: Average loss: 2.8935, Accuracy: 14478/24000 (60%)
+Took 1901.4081406593323 seconds.
+Test set: Average loss: 2.5789, Top-1 Accuracy: 4054/6000 (67.5667%)
+Took 1903.451776266098 seconds.
+Test set: Average loss: 2.5789, Top-5 Accuracy: 5709.0/6000 (95.1500%)
+Took 1903.451776266098 seconds.
+
+----- Layer 1, Node 1, Epoch 26/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.009571
+Train set: Average loss: 0.0306
+Valid set: Average loss: 2.5993, Accuracy: 15543/24000 (65%)
+Took 1928.2916514873505 seconds.
+Test set: Average loss: 2.1828, Top-1 Accuracy: 4297/6000 (71.6167%)
+Took 1930.3146977424622 seconds.
+Test set: Average loss: 2.1828, Top-5 Accuracy: 5806.0/6000 (96.7667%)
+Took 1930.3146977424622 seconds.
+
+----- Layer 1, Node 1, Epoch 27/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.002461
+Train set: Average loss: 0.0079
+Valid set: Average loss: 2.6662, Accuracy: 15632/24000 (65%)
+Took 1955.165512084961 seconds.
+Test set: Average loss: 2.2863, Top-1 Accuracy: 4298/6000 (71.6333%)
+Took 1957.1973133087158 seconds.
+Test set: Average loss: 2.2863, Top-5 Accuracy: 5797.0/6000 (96.6167%)
+Took 1957.1973133087158 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 2.2148, Top-1 Accuracy: 4251/6000 (70.8500%)
+Took 1959.2680852413177 seconds.
+Test set: Average loss: 2.2148, Top-5 Accuracy: 5807.0/6000 (96.7833%)
+Took 1959.2680852413177 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 2.6397, Top-1 Accuracy: 4212/6000 (70.2000%)
+Took 1960.1391997337341 seconds.
+Test set: Average loss: 2.6397, Top-5 Accuracy: 5442.0/6000 (90.7000%)
+Took 1960.1391997337341 seconds.
+Test set: Average loss: 1.3610, Top-1 Accuracy: 4971/6000 (82.8500%)
+Took 1961.1494355201721 seconds.
+Test set: Average loss: 1.3610, Top-5 Accuracy: 5791.0/6000 (96.5167%)
+Took 1961.1494355201721 seconds.
+Test set: Average loss: 3.0510, Top-1 Accuracy: 3319/6000 (55.3167%)
+Took 1962.562688589096 seconds.
+Test set: Average loss: 3.0510, Top-5 Accuracy: 5419.0/6000 (90.3167%)
+Took 1962.562688589096 seconds.
+Test set: Average loss: 2.2148, Top-1 Accuracy: 4251/6000 (70.8500%)
+Took 1964.5825691223145 seconds.
+Test set: Average loss: 2.2148, Top-5 Accuracy: 5807.0/6000 (96.7833%)
+Took 1964.5825691223145 seconds.
+
+Average Top-1 accuracy: tensor(69.8042)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625]
+============== Continual learning on task 4 =================
+
+[before adaption and growth]
+Test set: Average loss: 3.0943, Top-1 Accuracy: 3083/6000 (51.3833%)
+Took 1966.8956389427185 seconds.
+Test set: Average loss: 3.0943, Top-5 Accuracy: 5688.0/6000 (94.8000%)
+Took 1966.8956389427185 seconds.
+old_data shape: torch.Size([10000, 3072])
+new_data_1 shape: torch.Size([10000, 3072])
+MMD loss:tensor(0.1068, device='cuda:0')
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 3.0943, Top-1 Accuracy: 3083/6000 (51.3833%)
+Took 1977.4072909355164 seconds.
+Test set: Average loss: 3.0943, Top-5 Accuracy: 5688.0/6000 (94.8000%)
+Took 1977.4072909355164 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.747370
+Train set: Average loss: 0.8530
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.8368, Accuracy: 17873/30000 (60%)
+Took 2004.8875818252563 seconds.
+Test set: Average loss: 1.1057, Top-1 Accuracy: 4031/6000 (67.1833%)
+Took 2007.1069076061249 seconds.
+Test set: Average loss: 1.1057, Top-5 Accuracy: 5858.0/6000 (97.6333%)
+Took 2007.1069076061249 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.563992
+Train set: Average loss: 0.5451
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.0416, Accuracy: 18238/30000 (61%)
+Took 2034.6243119239807 seconds.
+Test set: Average loss: 1.1849, Top-1 Accuracy: 4078/6000 (67.9667%)
+Took 2036.8630197048187 seconds.
+Test set: Average loss: 1.1849, Top-5 Accuracy: 5893.0/6000 (98.2167%)
+Took 2036.8630197048187 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.462936
+Train set: Average loss: 0.4305
+Valid set: Average loss: 2.1563, Accuracy: 17937/30000 (60%)
+Took 2064.3177609443665 seconds.
+Test set: Average loss: 1.4148, Top-1 Accuracy: 3909/6000 (65.1500%)
+Took 2066.5496451854706 seconds.
+Test set: Average loss: 1.4148, Top-5 Accuracy: 5812.0/6000 (96.8667%)
+Took 2066.5496451854706 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.395641
+Train set: Average loss: 0.3707
+Valid set: Average loss: 2.6961, Accuracy: 17069/30000 (57%)
+Took 2094.258041858673 seconds.
+Test set: Average loss: 1.4034, Top-1 Accuracy: 3987/6000 (66.4500%)
+Took 2096.50070810318 seconds.
+Test set: Average loss: 1.4034, Top-5 Accuracy: 5841.0/6000 (97.3500%)
+Took 2096.50070810318 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.352822
+Train set: Average loss: 0.3375
+Valid set: Average loss: 2.6798, Accuracy: 17571/30000 (59%)
+Took 2124.161041021347 seconds.
+Test set: Average loss: 1.4074, Top-1 Accuracy: 4028/6000 (67.1333%)
+Took 2126.3965635299683 seconds.
+Test set: Average loss: 1.4074, Top-5 Accuracy: 5874.0/6000 (97.9000%)
+Took 2126.3965635299683 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.346302
+Train set: Average loss: 0.3226
+Valid set: Average loss: 2.6753, Accuracy: 17172/30000 (57%)
+Took 2153.965167760849 seconds.
+Test set: Average loss: 1.8055, Top-1 Accuracy: 3812/6000 (63.5333%)
+Took 2156.1936383247375 seconds.
+Test set: Average loss: 1.8055, Top-5 Accuracy: 5789.0/6000 (96.4833%)
+Took 2156.1936383247375 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.315885
+Train set: Average loss: 0.2965
+Valid set: Average loss: 2.5389, Accuracy: 18137/30000 (60%)
+Took 2183.7251052856445 seconds.
+Test set: Average loss: 1.7159, Top-1 Accuracy: 3920/6000 (65.3333%)
+Took 2185.9726600646973 seconds.
+Test set: Average loss: 1.7159, Top-5 Accuracy: 5847.0/6000 (97.4500%)
+Took 2185.9726600646973 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.261930
+Train set: Average loss: 0.2824
+Valid set: Average loss: 2.7932, Accuracy: 17826/30000 (59%)
+Took 2213.57213640213 seconds.
+Test set: Average loss: 1.9677, Top-1 Accuracy: 3925/6000 (65.4167%)
+Took 2215.8113775253296 seconds.
+Test set: Average loss: 1.9677, Top-5 Accuracy: 5800.0/6000 (96.6667%)
+Took 2215.8113775253296 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.251386
+Train set: Average loss: 0.2540
+Valid set: Average loss: 3.2611, Accuracy: 16204/30000 (54%)
+Took 2243.3575592041016 seconds.
+Test set: Average loss: 1.8731, Top-1 Accuracy: 3971/6000 (66.1833%)
+Took 2245.5966081619263 seconds.
+Test set: Average loss: 1.8731, Top-5 Accuracy: 5776.0/6000 (96.2667%)
+Took 2245.5966081619263 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.248195
+Train set: Average loss: 0.2223
+Valid set: Average loss: 2.9942, Accuracy: 17449/30000 (58%)
+Took 2273.1066999435425 seconds.
+Test set: Average loss: 2.0446, Top-1 Accuracy: 3939/6000 (65.6500%)
+Took 2275.3221905231476 seconds.
+Test set: Average loss: 2.0446, Top-5 Accuracy: 5821.0/6000 (97.0167%)
+Took 2275.3221905231476 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.226908
+Train set: Average loss: 0.2006
+Valid set: Average loss: 3.3157, Accuracy: 16523/30000 (55%)
+Took 2303.4200150966644 seconds.
+Test set: Average loss: 2.4576, Top-1 Accuracy: 3685/6000 (61.4167%)
+Took 2305.6414909362793 seconds.
+Test set: Average loss: 2.4576, Top-5 Accuracy: 5699.0/6000 (94.9833%)
+Took 2305.6414909362793 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.184708
+Train set: Average loss: 0.1929
+Valid set: Average loss: 4.0341, Accuracy: 14959/30000 (50%)
+Took 2333.180500268936 seconds.
+Test set: Average loss: 3.1908, Top-1 Accuracy: 3392/6000 (56.5333%)
+Took 2335.4001417160034 seconds.
+Test set: Average loss: 3.1908, Top-5 Accuracy: 5615.0/6000 (93.5833%)
+Took 2335.4001417160034 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.159644
+Train set: Average loss: 0.1857
+Valid set: Average loss: 4.0399, Accuracy: 14787/30000 (49%)
+Took 2363.1279859542847 seconds.
+Test set: Average loss: 2.8664, Top-1 Accuracy: 3471/6000 (57.8500%)
+Took 2365.349497795105 seconds.
+Test set: Average loss: 2.8664, Top-5 Accuracy: 5673.0/6000 (94.5500%)
+Took 2365.349497795105 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.141974
+Train set: Average loss: 0.1510
+Valid set: Average loss: 3.6877, Accuracy: 15938/30000 (53%)
+Took 2392.9158878326416 seconds.
+Test set: Average loss: 2.6239, Top-1 Accuracy: 3707/6000 (61.7833%)
+Took 2395.1708703041077 seconds.
+Test set: Average loss: 2.6239, Top-5 Accuracy: 5731.0/6000 (95.5167%)
+Took 2395.1708703041077 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.144485
+Train set: Average loss: 0.1517
+Valid set: Average loss: 4.0712, Accuracy: 15802/30000 (53%)
+Took 2422.7924070358276 seconds.
+Test set: Average loss: 2.9508, Top-1 Accuracy: 3638/6000 (60.6333%)
+Took 2425.0171315670013 seconds.
+Test set: Average loss: 2.9508, Top-5 Accuracy: 5733.0/6000 (95.5500%)
+Took 2425.0171315670013 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.142544
+Train set: Average loss: 0.1591
+Valid set: Average loss: 3.2603, Accuracy: 16746/30000 (56%)
+Took 2452.5818722248077 seconds.
+Test set: Average loss: 2.6026, Top-1 Accuracy: 3712/6000 (61.8667%)
+Took 2454.81808757782 seconds.
+Test set: Average loss: 2.6026, Top-5 Accuracy: 5601.0/6000 (93.3500%)
+Took 2454.81808757782 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.151089
+Train set: Average loss: 0.1894
+Valid set: Average loss: 2.7340, Accuracy: 18002/30000 (60%)
+Took 2482.2716171741486 seconds.
+Test set: Average loss: 1.8725, Top-1 Accuracy: 4010/6000 (66.8333%)
+Took 2484.4917335510254 seconds.
+Test set: Average loss: 1.8725, Top-5 Accuracy: 5821.0/6000 (97.0167%)
+Took 2484.4917335510254 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.111605
+Train set: Average loss: 0.1393
+Valid set: Average loss: 3.3809, Accuracy: 17061/30000 (57%)
+Took 2512.219741821289 seconds.
+Test set: Average loss: 2.9239, Top-1 Accuracy: 3676/6000 (61.2667%)
+Took 2514.4311904907227 seconds.
+Test set: Average loss: 2.9239, Top-5 Accuracy: 5704.0/6000 (95.0667%)
+Took 2514.4311904907227 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.129269
+Train set: Average loss: 0.1083
+Valid set: Average loss: 3.3839, Accuracy: 17565/30000 (59%)
+Took 2541.87593793869 seconds.
+Test set: Average loss: 2.6767, Top-1 Accuracy: 3824/6000 (63.7333%)
+Took 2544.0917513370514 seconds.
+Test set: Average loss: 2.6767, Top-5 Accuracy: 5719.0/6000 (95.3167%)
+Took 2544.0917513370514 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.120206
+Train set: Average loss: 0.1066
+Valid set: Average loss: 3.4399, Accuracy: 17084/30000 (57%)
+Took 2571.590025663376 seconds.
+Test set: Average loss: 3.0844, Top-1 Accuracy: 3571/6000 (59.5167%)
+Took 2573.82510638237 seconds.
+Test set: Average loss: 3.0844, Top-5 Accuracy: 5683.0/6000 (94.7167%)
+Took 2573.82510638237 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.114323
+Train set: Average loss: 0.1004
+Valid set: Average loss: 3.0338, Accuracy: 18194/30000 (61%)
+Took 2601.353514432907 seconds.
+Test set: Average loss: 2.3637, Top-1 Accuracy: 3968/6000 (66.1333%)
+Took 2603.593398809433 seconds.
+Test set: Average loss: 2.3637, Top-5 Accuracy: 5751.0/6000 (95.8500%)
+Took 2603.593398809433 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.119509
+Train set: Average loss: 0.1092
+Valid set: Average loss: 3.1614, Accuracy: 17591/30000 (59%)
+Took 2631.3306090831757 seconds.
+Test set: Average loss: 2.1032, Top-1 Accuracy: 4010/6000 (66.8333%)
+Took 2633.579362154007 seconds.
+Test set: Average loss: 2.1032, Top-5 Accuracy: 5726.0/6000 (95.4333%)
+Took 2633.579362154007 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.085911
+Train set: Average loss: 0.0977
+Valid set: Average loss: 3.3253, Accuracy: 17087/30000 (57%)
+Took 2661.244705438614 seconds.
+Test set: Average loss: 2.6703, Top-1 Accuracy: 3669/6000 (61.1500%)
+Took 2663.532336950302 seconds.
+Test set: Average loss: 2.6703, Top-5 Accuracy: 5654.0/6000 (94.2333%)
+Took 2663.532336950302 seconds.
+
+----- Layer 1, Node 1, Epoch 24/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.086570
+Train set: Average loss: 0.0997
+Valid set: Average loss: 3.2503, Accuracy: 17654/30000 (59%)
+Took 2691.3756206035614 seconds.
+Test set: Average loss: 2.3642, Top-1 Accuracy: 3911/6000 (65.1833%)
+Took 2693.6265816688538 seconds.
+Test set: Average loss: 2.3642, Top-5 Accuracy: 5683.0/6000 (94.7167%)
+Took 2693.6265816688538 seconds.
+
+----- Layer 1, Node 1, Epoch 25/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.087852
+Train set: Average loss: 0.1113
+Valid set: Average loss: 2.9678, Accuracy: 17520/30000 (58%)
+Took 2722.1154704093933 seconds.
+Test set: Average loss: 2.2025, Top-1 Accuracy: 3961/6000 (66.0167%)
+Took 2724.4220032691956 seconds.
+Test set: Average loss: 2.2025, Top-5 Accuracy: 5717.0/6000 (95.2833%)
+Took 2724.4220032691956 seconds.
+
+----- Layer 1, Node 1, Epoch 26/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.022073
+Train set: Average loss: 0.0455
+Valid set: Average loss: 3.0244, Accuracy: 18061/30000 (60%)
+Took 2753.085036277771 seconds.
+Test set: Average loss: 2.2378, Top-1 Accuracy: 4074/6000 (67.9000%)
+Took 2755.41180562973 seconds.
+Test set: Average loss: 2.2378, Top-5 Accuracy: 5639.0/6000 (93.9833%)
+Took 2755.41180562973 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.1849, Top-1 Accuracy: 4078/6000 (67.9667%)
+Took 2757.763099193573 seconds.
+Test set: Average loss: 1.1849, Top-5 Accuracy: 5893.0/6000 (98.2167%)
+Took 2757.763099193573 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 3.4028, Top-1 Accuracy: 3352/6000 (55.8667%)
+Took 2758.6783752441406 seconds.
+Test set: Average loss: 3.4028, Top-5 Accuracy: 5063.0/6000 (84.3833%)
+Took 2758.6783752441406 seconds.
+Test set: Average loss: 1.8353, Top-1 Accuracy: 4222/6000 (70.3667%)
+Took 2759.7234666347504 seconds.
+Test set: Average loss: 1.8353, Top-5 Accuracy: 5576.0/6000 (92.9333%)
+Took 2759.7234666347504 seconds.
+Test set: Average loss: 2.7808, Top-1 Accuracy: 2913/6000 (48.5500%)
+Took 2761.2011585235596 seconds.
+Test set: Average loss: 2.7808, Top-5 Accuracy: 5155.0/6000 (85.9167%)
+Took 2761.2011585235596 seconds.
+Test set: Average loss: 0.8473, Top-1 Accuracy: 4916/6000 (81.9333%)
+Took 2763.3034007549286 seconds.
+Test set: Average loss: 0.8473, Top-5 Accuracy: 5893.0/6000 (98.2167%)
+Took 2763.3034007549286 seconds.
+Test set: Average loss: 1.1849, Top-1 Accuracy: 4078/6000 (67.9667%)
+Took 2765.606823205948 seconds.
+Test set: Average loss: 1.1849, Top-5 Accuracy: 5893.0/6000 (98.2167%)
+Took 2765.606823205948 seconds.
+
+Average Top-1 accuracy: tensor(64.9367)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734, 64.9366683959961]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625, 91.93334197998047]
+============== Continual learning on task 5 =================
+
+
+[before adaption and growth]
+Test set: Average loss: 3.1893, Top-1 Accuracy: 3098/6000 (51.6333%)
+Took 2766.996425628662 seconds.
+Test set: Average loss: 3.1893, Top-5 Accuracy: 4856.0/6000 (80.9333%)
+Took 2766.996425628662 seconds.
+old_data shape: torch.Size([30000, 3072])
+new_data_1 shape: torch.Size([30000, 3072])
+MMD loss:tensor(0.0213, device='cuda:0')
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 3.1893, Top-1 Accuracy: 3098/6000 (51.6333%)
+Took 2783.5451102256775 seconds.
+Test set: Average loss: 3.1893, Top-5 Accuracy: 4856.0/6000 (80.9333%)
+Took 2783.5451102256775 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.763261
+Train set: Average loss: 1.0039
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.5870, Accuracy: 22190/36000 (62%)
+Took 2808.3643021583557 seconds.
+Test set: Average loss: 0.9500, Top-1 Accuracy: 4513/6000 (75.2167%)
+Took 2809.655789375305 seconds.
+Test set: Average loss: 0.9500, Top-5 Accuracy: 5773.0/6000 (96.2167%)
+Took 2809.655789375305 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.526285
+Train set: Average loss: 0.5861
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.7998, Accuracy: 22302/36000 (62%)
+Took 2834.2156145572662 seconds.
+Test set: Average loss: 1.0735, Top-1 Accuracy: 4530/6000 (75.5000%)
+Took 2835.454128265381 seconds.
+Test set: Average loss: 1.0735, Top-5 Accuracy: 5795.0/6000 (96.5833%)
+Took 2835.454128265381 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.384479
+Train set: Average loss: 0.4277
+Valid set: Average loss: 2.1018, Accuracy: 22199/36000 (62%)
+Took 2859.7315232753754 seconds.
+Test set: Average loss: 1.4338, Top-1 Accuracy: 4406/6000 (73.4333%)
+Took 2860.9602971076965 seconds.
+Test set: Average loss: 1.4338, Top-5 Accuracy: 5759.0/6000 (95.9833%)
+Took 2860.9602971076965 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.329722
+Train set: Average loss: 0.3393
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.0976, Accuracy: 22934/36000 (64%)
+Took 2885.3263161182404 seconds.
+Test set: Average loss: 1.1769, Top-1 Accuracy: 4657/6000 (77.6167%)
+Took 2886.558979988098 seconds.
+Test set: Average loss: 1.1769, Top-5 Accuracy: 5825.0/6000 (97.0833%)
+Took 2886.558979988098 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.314667
+Train set: Average loss: 0.3008
+Valid set: Average loss: 2.3511, Accuracy: 21913/36000 (61%)
+Took 2910.9302899837494 seconds.
+Test set: Average loss: 1.3374, Top-1 Accuracy: 4569/6000 (76.1500%)
+Took 2912.1613261699677 seconds.
+Test set: Average loss: 1.3374, Top-5 Accuracy: 5818.0/6000 (96.9667%)
+Took 2912.1613261699677 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.281461
+Train set: Average loss: 0.2880
+Valid set: Average loss: 2.4660, Accuracy: 21755/36000 (60%)
+Took 2936.552724838257 seconds.
+Test set: Average loss: 1.7381, Top-1 Accuracy: 4287/6000 (71.4500%)
+Took 2937.7860367298126 seconds.
+Test set: Average loss: 1.7381, Top-5 Accuracy: 5728.0/6000 (95.4667%)
+Took 2937.7860367298126 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.231729
+Train set: Average loss: 0.2733
+Valid set: Average loss: 2.3821, Accuracy: 22890/36000 (64%)
+Took 2962.228535413742 seconds.
+Test set: Average loss: 1.4822, Top-1 Accuracy: 4620/6000 (77.0000%)
+Took 2963.463849544525 seconds.
+Test set: Average loss: 1.4822, Top-5 Accuracy: 5811.0/6000 (96.8500%)
+Took 2963.463849544525 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 5/15---------
+^[[B          [56320/60000 (0%)]      Loss: 0.203399
+Train set: Average loss: 0.2333
+Valid set: Average loss: 2.5438, Accuracy: 22628/36000 (63%)
+Took 2987.8431782722473 seconds.
+Test set: Average loss: 1.3312, Top-1 Accuracy: 4704/6000 (78.4000%)
+Took 2989.0768699645996 seconds.
+Test set: Average loss: 1.3312, Top-5 Accuracy: 5826.0/6000 (97.1000%)
+Took 2989.0768699645996 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.185593
+Train set: Average loss: 0.2172
+Valid set: Average loss: 2.4711, Accuracy: 22789/36000 (63%)
+Took 3013.409594297409 seconds.
+Test set: Average loss: 1.2979, Top-1 Accuracy: 4776/6000 (79.6000%)
+Took 3014.639839410782 seconds.
+Test set: Average loss: 1.2979, Top-5 Accuracy: 5843.0/6000 (97.3833%)
+Took 3014.639839410782 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.188941
+Train set: Average loss: 0.2250
+Valid set: Average loss: 2.3272, Accuracy: 22904/36000 (64%)
+Took 3038.9113261699677 seconds.
+Test set: Average loss: 1.6234, Top-1 Accuracy: 4476/6000 (74.6000%)
+Took 3040.1639699935913 seconds.
+Test set: Average loss: 1.6234, Top-5 Accuracy: 5771.0/6000 (96.1833%)
+Took 3040.1639699935913 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.182238
+Train set: Average loss: 0.2278
+Valid set: Average loss: 2.4294, Accuracy: 22503/36000 (63%)
+Took 3064.567489385605 seconds.
+Test set: Average loss: 1.4973, Top-1 Accuracy: 4591/6000 (76.5167%)
+Took 3065.7988135814667 seconds.
+Test set: Average loss: 1.4973, Top-5 Accuracy: 5736.0/6000 (95.6000%)
+Took 3065.7988135814667 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.152957
+Train set: Average loss: 0.2042
+Valid set: Average loss: 2.3884, Accuracy: 22891/36000 (64%)
+Took 3090.1202805042267 seconds.
+Test set: Average loss: 1.4967, Top-1 Accuracy: 4583/6000 (76.3833%)
+Took 3091.3527252674103 seconds.
+Test set: Average loss: 1.4967, Top-5 Accuracy: 5796.0/6000 (96.6000%)
+Took 3091.3527252674103 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.142217
+Train set: Average loss: 0.1586
+Valid set: Average loss: 2.9863, Accuracy: 21219/36000 (59%)
+Took 3115.734131336212 seconds.
+Test set: Average loss: 1.5251, Top-1 Accuracy: 4570/6000 (76.1667%)
+Took 3117.0175602436066 seconds.
+Test set: Average loss: 1.5251, Top-5 Accuracy: 5824.0/6000 (97.0667%)
+Took 3117.0175602436066 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.122233
+Train set: Average loss: 0.1295
+Valid set: Average loss: 3.6997, Accuracy: 20165/36000 (56%)
+Took 3141.32866191864 seconds.
+Test set: Average loss: 1.9456, Top-1 Accuracy: 4452/6000 (74.2000%)
+Took 3142.559315919876 seconds.
+Test set: Average loss: 1.9456, Top-5 Accuracy: 5779.0/6000 (96.3167%)
+Took 3142.559315919876 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.115554
+Train set: Average loss: 0.1278
+Valid set: Average loss: 2.9039, Accuracy: 22133/36000 (61%)
+Took 3166.871273756027 seconds.
+Test set: Average loss: 1.6255, Top-1 Accuracy: 4605/6000 (76.7500%)
+Took 3168.1018357276917 seconds.
+Test set: Average loss: 1.6255, Top-5 Accuracy: 5809.0/6000 (96.8167%)
+Took 3168.1018357276917 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.122008
+Train set: Average loss: 0.1212
+Valid set: Average loss: 3.0155, Accuracy: 22148/36000 (62%)
+Took 3192.4933631420135 seconds.
+Test set: Average loss: 1.4792, Top-1 Accuracy: 4726/6000 (78.7667%)
+Took 3193.753696203232 seconds.
+Test set: Average loss: 1.4792, Top-5 Accuracy: 5840.0/6000 (97.3333%)
+Took 3193.753696203232 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.131844
+Train set: Average loss: 0.1081
+Valid set: Average loss: 3.4301, Accuracy: 21794/36000 (61%)
+Took 3218.0799462795258 seconds.
+Test set: Average loss: 1.5049, Top-1 Accuracy: 4776/6000 (79.6000%)
+Took 3219.3088159561157 seconds.
+Test set: Average loss: 1.5049, Top-5 Accuracy: 5867.0/6000 (97.7833%)
+Took 3219.3088159561157 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.112641
+Train set: Average loss: 0.1089
+Valid set: Average loss: 3.2736, Accuracy: 21403/36000 (59%)
+Took 3243.6907346248627 seconds.
+Test set: Average loss: 1.5026, Top-1 Accuracy: 4718/6000 (78.6333%)
+Took 3244.922221183777 seconds.
+Test set: Average loss: 1.5026, Top-5 Accuracy: 5854.0/6000 (97.5667%)
+Took 3244.922221183777 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.106245
+Train set: Average loss: 0.0978
+Valid set: Average loss: 3.0296, Accuracy: 22503/36000 (63%)
+Took 3269.645660877228 seconds.
+Test set: Average loss: 1.5403, Top-1 Accuracy: 4754/6000 (79.2333%)
+Took 3270.9066236019135 seconds.
+Test set: Average loss: 1.5403, Top-5 Accuracy: 5852.0/6000 (97.5333%)
+Took 3270.9066236019135 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.139106
+Train set: Average loss: 0.0994
+Valid set: Average loss: 3.4686, Accuracy: 21550/36000 (60%)
+Took 3295.657871723175 seconds.
+Test set: Average loss: 1.5441, Top-1 Accuracy: 4802/6000 (80.0333%)
+Took 3296.9272871017456 seconds.
+Test set: Average loss: 1.5441, Top-5 Accuracy: 5836.0/6000 (97.2667%)
+Took 3296.9272871017456 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.093577
+Train set: Average loss: 0.0925
+Valid set: Average loss: 3.4139, Accuracy: 21511/36000 (60%)
+Took 3321.709701538086 seconds.
+Test set: Average loss: 1.8372, Top-1 Accuracy: 4566/6000 (76.1000%)
+Took 3322.9617161750793 seconds.
+Test set: Average loss: 1.8372, Top-5 Accuracy: 5828.0/6000 (97.1333%)
+Took 3322.9617161750793 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.097940
+Train set: Average loss: 0.0925
+Valid set: Average loss: 3.5619, Accuracy: 21249/36000 (59%)
+Took 3347.664695739746 seconds.
+Test set: Average loss: 1.6890, Top-1 Accuracy: 4681/6000 (78.0167%)
+Took 3348.9087822437286 seconds.
+Test set: Average loss: 1.6890, Top-5 Accuracy: 5838.0/6000 (97.3000%)
+Took 3348.9087822437286 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.075413
+Train set: Average loss: 0.0886
+Valid set: Average loss: 3.9481, Accuracy: 20179/36000 (56%)
+Took 3373.540363073349 seconds.
+Test set: Average loss: 2.0651, Top-1 Accuracy: 4432/6000 (73.8667%)
+Took 3374.789717435837 seconds.
+Test set: Average loss: 2.0651, Top-5 Accuracy: 5876.0/6000 (97.9333%)
+Took 3374.789717435837 seconds.
+
+----- Layer 1, Node 1, Epoch 24/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.087912
+Train set: Average loss: 0.0808
+Valid set: Average loss: 3.0478, Accuracy: 22247/36000 (62%)
+Took 3399.457187652588 seconds.
+Test set: Average loss: 2.0191, Top-1 Accuracy: 4470/6000 (74.5000%)
+Took 3400.716467142105 seconds.
+Test set: Average loss: 2.0191, Top-5 Accuracy: 5778.0/6000 (96.3000%)
+Took 3400.716467142105 seconds.
+
+----- Layer 1, Node 1, Epoch 25/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.071147
+Train set: Average loss: 0.0744
+Valid set: Average loss: 3.4600, Accuracy: 20811/36000 (58%)
+Took 3425.4883029460907 seconds.
+Test set: Average loss: 2.0737, Top-1 Accuracy: 4451/6000 (74.1833%)
+Took 3426.738582611084 seconds.
+Test set: Average loss: 2.0737, Top-5 Accuracy: 5760.0/6000 (96.0000%)
+Took 3426.738582611084 seconds.
+
+----- Layer 1, Node 1, Epoch 26/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.017196
+Train set: Average loss: 0.0379
+Valid set: Average loss: 3.2772, Accuracy: 22608/36000 (63%)
+Took 3451.472223997116 seconds.
+Test set: Average loss: 1.4271, Top-1 Accuracy: 4907/6000 (81.7833%)
+Took 3452.7184743881226 seconds.
+Test set: Average loss: 1.4271, Top-5 Accuracy: 5879.0/6000 (97.9833%)
+Took 3452.7184743881226 seconds.
+
+----- Layer 1, Node 1, Epoch 27/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.006781
+Train set: Average loss: 0.0098
+Valid set: Average loss: 3.4818, Accuracy: 22390/36000 (62%)
+Took 3477.439154624939 seconds.
+Test set: Average loss: 1.4492, Top-1 Accuracy: 4936/6000 (82.2667%)
+Took 3478.7233531475067 seconds.
+Test set: Average loss: 1.4492, Top-5 Accuracy: 5880.0/6000 (98.0000%)
+Took 3478.7233531475067 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.1769, Top-1 Accuracy: 4657/6000 (77.6167%)
+Took 3479.99729180336 seconds.
+Test set: Average loss: 1.1769, Top-5 Accuracy: 5825.0/6000 (97.0833%)
+Took 3479.99729180336 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 1.3831, Top-1 Accuracy: 4302/6000 (71.7000%)
+Took 3480.911949634552 seconds.
+Test set: Average loss: 1.3831, Top-5 Accuracy: 5745.0/6000 (95.7500%)
+Took 3480.911949634552 seconds.
+Test set: Average loss: 1.4284, Top-1 Accuracy: 4489/6000 (74.8167%)
+Took 3481.9597268104553 seconds.
+Test set: Average loss: 1.4284, Top-5 Accuracy: 5635.0/6000 (93.9167%)
+Took 3481.9597268104553 seconds.
+Test set: Average loss: 3.2964, Top-1 Accuracy: 2811/6000 (46.8500%)
+Took 3483.4334609508514 seconds.
+Test set: Average loss: 3.2964, Top-5 Accuracy: 4696.0/6000 (78.2667%)
+Took 3483.4334609508514 seconds.
+Test set: Average loss: 2.7789, Top-1 Accuracy: 3432/6000 (57.2000%)
+Took 3485.549949169159 seconds.
+Test set: Average loss: 2.7789, Top-5 Accuracy: 5364.0/6000 (89.4000%)
+Took 3485.549949169159 seconds.
+Test set: Average loss: 3.4343, Top-1 Accuracy: 2565/6000 (42.7500%)
+Took 3487.8577585220337 seconds.
+Test set: Average loss: 3.4343, Top-5 Accuracy: 5242.0/6000 (87.3667%)
+Took 3487.8577585220337 seconds.
+Test set: Average loss: 1.1769, Top-1 Accuracy: 4657/6000 (77.6167%)
+Took 3489.1330604553223 seconds.
+Test set: Average loss: 1.1769, Top-5 Accuracy: 5825.0/6000 (97.0833%)
+Took 3489.1330604553223 seconds.
+
+Average Top-1 accuracy: tensor(61.8222)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734, 64.9366683959961, 61.82221984863281]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625, 91.93334197998047, 90.29722595214844]
+============== Continual learning on task 6 =================
+
+[before adaption and growth]
+Test set: Average loss: 4.3741, Top-1 Accuracy: 2320/6000 (38.6667%)
+Took 3490.3201909065247 seconds.
+Test set: Average loss: 4.3741, Top-5 Accuracy: 4701.0/6000 (78.3500%)
+Took 3490.3201909065247 seconds.
+old_data shape: torch.Size([25000, 3072])
+new_data_1 shape: torch.Size([25000, 3072])
+MMD loss:tensor(0.6366, device='cuda:0')
+
+ ------------ start adaptation .............
+--------- Task 6, DA Epoch 1/15 ---------
+              [23040/30000 (0%)]      Loss: 4.894215
+Train set: Average loss: 4.4038
+Test set: Average loss: 5.6023, Top-1 Accuracy: 1858/6000 (30.9667%)
+Took 3514.456648826599 seconds.
+Test set: Average loss: 5.6023, Top-5 Accuracy: 4322.0/6000 (72.0333%)
+Took 3514.456648826599 seconds.
+--------- Task 6, DA Epoch 2/15 ---------
+              [23040/30000 (0%)]      Loss: 4.815395
+Train set: Average loss: 4.3256
+Test set: Average loss: 5.5811, Top-1 Accuracy: 1868/6000 (31.1333%)
+Took 3527.709620952606 seconds.
+Test set: Average loss: 5.5811, Top-5 Accuracy: 4305.0/6000 (71.7500%)
+Took 3527.709620952606 seconds.
+--------- Task 6, DA Epoch 3/15 ---------
+              [23040/30000 (0%)]      Loss: 4.738177
+Train set: Average loss: 4.2492
+Test set: Average loss: 5.5626, Top-1 Accuracy: 1870/6000 (31.1667%)
+Took 3541.0089435577393 seconds.
+Test set: Average loss: 5.5626, Top-5 Accuracy: 4288.0/6000 (71.4667%)
+Took 3541.0089435577393 seconds.
+--------- Task 6, DA Epoch 4/15 ---------
+              [23040/30000 (0%)]      Loss: 4.664692
+Train set: Average loss: 4.1792
+Test set: Average loss: 5.5358, Top-1 Accuracy: 1869/6000 (31.1500%)
+Took 3554.267538547516 seconds.
+Test set: Average loss: 5.5358, Top-5 Accuracy: 4277.0/6000 (71.2833%)
+Took 3554.267538547516 seconds.
+--------- Task 6, DA Epoch 5/15 ---------
+              [23040/30000 (0%)]      Loss: 4.601219
+Train set: Average loss: 4.1142
+Test set: Average loss: 5.5075, Top-1 Accuracy: 1860/6000 (31.0000%)
+Took 3567.505185365677 seconds.
+Test set: Average loss: 5.5075, Top-5 Accuracy: 4257.0/6000 (70.9500%)
+Took 3567.505185365677 seconds.
+--------- Task 6, DA Epoch 6/15 ---------
+              [23040/30000 (0%)]      Loss: 4.542975
+Train set: Average loss: 4.0537
+Test set: Average loss: 5.4784, Top-1 Accuracy: 1869/6000 (31.1500%)
+Took 3580.7360379695892 seconds.
+Test set: Average loss: 5.4784, Top-5 Accuracy: 4260.0/6000 (71.0000%)
+Took 3580.7360379695892 seconds.
+--------- Task 6, DA Epoch 7/15 ---------
+              [23040/30000 (0%)]      Loss: 4.485880
+Train set: Average loss: 3.9954
+Test set: Average loss: 5.4468, Top-1 Accuracy: 1892/6000 (31.5333%)
+Took 3593.991839170456 seconds.
+Test set: Average loss: 5.4468, Top-5 Accuracy: 4268.0/6000 (71.1333%)
+Took 3593.991839170456 seconds.
+--------- Task 6, DA Epoch 8/15 ---------
+              [23040/30000 (0%)]      Loss: 4.433978
+Train set: Average loss: 3.9401
+Test set: Average loss: 5.4120, Top-1 Accuracy: 1894/6000 (31.5667%)
+Took 3607.189968585968 seconds.
+Test set: Average loss: 5.4120, Top-5 Accuracy: 4279.0/6000 (71.3167%)
+Took 3607.189968585968 seconds.
+--------- Task 6, DA Epoch 9/15 ---------
+              [23040/30000 (0%)]      Loss: 4.386968
+Train set: Average loss: 3.8882
+Test set: Average loss: 5.3782, Top-1 Accuracy: 1902/6000 (31.7000%)
+Took 3620.394216299057 seconds.
+Test set: Average loss: 5.3782, Top-5 Accuracy: 4290.0/6000 (71.5000%)
+Took 3620.394216299057 seconds.
+--------- Task 6, DA Epoch 10/15 ---------
+              [23040/30000 (0%)]      Loss: 4.345636
+Train set: Average loss: 3.8387
+Test set: Average loss: 5.3458, Top-1 Accuracy: 1901/6000 (31.6833%)
+Took 3633.4358806610107 seconds.
+Test set: Average loss: 5.3458, Top-5 Accuracy: 4283.0/6000 (71.3833%)
+Took 3633.4358806610107 seconds.
+--------- Task 6, DA Epoch 11/15 ---------
+              [23040/30000 (0%)]      Loss: 4.308903
+Train set: Average loss: 3.7896
+Test set: Average loss: 5.3169, Top-1 Accuracy: 1899/6000 (31.6500%)
+Took 3646.632003545761 seconds.
+Test set: Average loss: 5.3169, Top-5 Accuracy: 4293.0/6000 (71.5500%)
+Took 3646.632003545761 seconds.
+--------- Task 6, DA Epoch 12/15 ---------
+              [23040/30000 (0%)]      Loss: 4.271797
+Train set: Average loss: 3.7391
+Test set: Average loss: 5.2927, Top-1 Accuracy: 1892/6000 (31.5333%)
+Took 3659.819818496704 seconds.
+Test set: Average loss: 5.2927, Top-5 Accuracy: 4305.0/6000 (71.7500%)
+Took 3659.819818496704 seconds.
+--------- Task 6, DA Epoch 13/15 ---------
+              [23040/30000 (0%)]      Loss: 4.235987
+Train set: Average loss: 3.6879
+Test set: Average loss: 5.2722, Top-1 Accuracy: 1906/6000 (31.7667%)
+Took 3673.017466068268 seconds.
+Test set: Average loss: 5.2722, Top-5 Accuracy: 4306.0/6000 (71.7667%)
+Took 3673.017466068268 seconds.
+--------- Task 6, DA Epoch 14/15 ---------
+              [23040/30000 (0%)]      Loss: 4.203397
+Train set: Average loss: 3.6385
+Test set: Average loss: 5.2511, Top-1 Accuracy: 1912/6000 (31.8667%)
+Took 3685.9776418209076 seconds.
+Test set: Average loss: 5.2511, Top-5 Accuracy: 4312.0/6000 (71.8667%)
+Took 3685.9776418209076 seconds.
+--------- Task 6, DA Epoch 15/15 ---------
+              [23040/30000 (0%)]      Loss: 4.171621
+Train set: Average loss: 3.5897
+Test set: Average loss: 5.2328, Top-1 Accuracy: 1905/6000 (31.7500%)
+Took 3698.9801774024963 seconds.
+Test set: Average loss: 5.2328, Top-5 Accuracy: 4322.0/6000 (72.0333%)
+Took 3698.9801774024963 seconds.
+[after adaption and growth]
+Test set: Average loss: 4.3741, Top-1 Accuracy: 2320/6000 (38.6667%)
+Took 3700.014214038849 seconds.
+Test set: Average loss: 4.3741, Top-5 Accuracy: 4701.0/6000 (78.3500%)
+Took 3700.014214038849 seconds.
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 4.3741, Top-1 Accuracy: 2320/6000 (38.6667%)
+Took 3702.1775085926056 seconds.
+Test set: Average loss: 4.3741, Top-5 Accuracy: 4701.0/6000 (78.3500%)
+Took 3702.1775085926056 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.749671
+Train set: Average loss: 1.0714
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.9469, Accuracy: 25461/42000 (61%)
+Took 3726.503780603409 seconds.
+Test set: Average loss: 0.9745, Top-1 Accuracy: 4307/6000 (71.7833%)
+Took 3727.5483231544495 seconds.
+Test set: Average loss: 0.9745, Top-5 Accuracy: 5890.0/6000 (98.1667%)
+Took 3727.5483231544495 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.538558
+Train set: Average loss: 0.6226
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.0892, Accuracy: 25492/42000 (61%)
+Took 3751.810839653015 seconds.
+Test set: Average loss: 1.0768, Top-1 Accuracy: 4377/6000 (72.9500%)
+Took 3752.8432607650757 seconds.
+Test set: Average loss: 1.0768, Top-5 Accuracy: 5890.0/6000 (98.1667%)
+Took 3752.8432607650757 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.442014
+Train set: Average loss: 0.4889
+Valid set: Average loss: 2.7573, Accuracy: 24488/42000 (58%)
+Took 3777.1252999305725 seconds.
+Test set: Average loss: 1.1421, Top-1 Accuracy: 4481/6000 (74.6833%)
+Took 3778.1581993103027 seconds.
+Test set: Average loss: 1.1421, Top-5 Accuracy: 5912.0/6000 (98.5333%)
+Took 3778.1581993103027 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.426636
+Train set: Average loss: 0.4380
+Valid set: Average loss: 2.2927, Accuracy: 25454/42000 (61%)
+Took 3802.559977531433 seconds.
+Test set: Average loss: 0.9797, Top-1 Accuracy: 4617/6000 (76.9500%)
+Took 3803.6072432994843 seconds.
+Test set: Average loss: 0.9797, Top-5 Accuracy: 5915.0/6000 (98.5833%)
+Took 3803.6072432994843 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.403294
+Train set: Average loss: 0.4256
+Valid set: Average loss: 2.4975, Accuracy: 24376/42000 (58%)
+Took 3827.907636642456 seconds.
+Test set: Average loss: 1.3001, Top-1 Accuracy: 4299/6000 (71.6500%)
+Took 3828.94198846817 seconds.
+Test set: Average loss: 1.3001, Top-5 Accuracy: 5808.0/6000 (96.8000%)
+Took 3828.94198846817 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.327286
+Train set: Average loss: 0.3612
+Valid set: Average loss: 2.7420, Accuracy: 23975/42000 (57%)
+Took 3853.274595975876 seconds.
+Test set: Average loss: 1.4639, Top-1 Accuracy: 4320/6000 (72.0000%)
+Took 3854.307760953903 seconds.
+Test set: Average loss: 1.4639, Top-5 Accuracy: 5815.0/6000 (96.9167%)
+Took 3854.307760953903 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.301219
+Train set: Average loss: 0.2878
+Valid set: Average loss: 3.1695, Accuracy: 22932/42000 (55%)
+Took 3878.7031676769257 seconds.
+Test set: Average loss: 1.3192, Top-1 Accuracy: 4438/6000 (73.9667%)
+Took 3879.748189687729 seconds.
+Test set: Average loss: 1.3192, Top-5 Accuracy: 5877.0/6000 (97.9500%)
+Took 3879.748189687729 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.276828
+Train set: Average loss: 0.2583
+Valid set: Average loss: 2.9301, Accuracy: 23896/42000 (57%)
+Took 3904.0310533046722 seconds.
+Test set: Average loss: 1.1471, Top-1 Accuracy: 4591/6000 (76.5167%)
+Took 3905.0669450759888 seconds.
+Test set: Average loss: 1.1471, Top-5 Accuracy: 5906.0/6000 (98.4333%)
+Took 3905.0669450759888 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.238533
+Train set: Average loss: 0.2329
+Valid set: Average loss: 3.3039, Accuracy: 22918/42000 (55%)
+Took 3929.3367142677307 seconds.
+Test set: Average loss: 1.6104, Top-1 Accuracy: 4312/6000 (71.8667%)
+Took 3930.368378162384 seconds.
+Test set: Average loss: 1.6104, Top-5 Accuracy: 5774.0/6000 (96.2333%)
+Took 3930.368378162384 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.286213
+Train set: Average loss: 0.2463
+Valid set: Average loss: 3.1909, Accuracy: 23240/42000 (55%)
+Took 3954.7722837924957 seconds.
+Test set: Average loss: 1.3260, Top-1 Accuracy: 4448/6000 (74.1333%)
+Took 3955.8329598903656 seconds.
+Test set: Average loss: 1.3260, Top-5 Accuracy: 5906.0/6000 (98.4333%)
+Took 3955.8329598903656 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.174887
+Train set: Average loss: 0.2120
+Valid set: Average loss: 3.9016, Accuracy: 21964/42000 (52%)
+Took 3980.5332033634186 seconds.
+Test set: Average loss: 1.8910, Top-1 Accuracy: 4168/6000 (69.4667%)
+Took 3981.5838453769684 seconds.
+Test set: Average loss: 1.8910, Top-5 Accuracy: 5892.0/6000 (98.2000%)
+Took 3981.5838453769684 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.153042
+Train set: Average loss: 0.1877
+Valid set: Average loss: 4.1854, Accuracy: 21764/42000 (52%)
+Took 4006.285734653473 seconds.
+Test set: Average loss: 1.8628, Top-1 Accuracy: 4261/6000 (71.0167%)
+Took 4007.337792634964 seconds.
+Test set: Average loss: 1.8628, Top-5 Accuracy: 5902.0/6000 (98.3667%)
+Took 4007.337792634964 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.150564
+Train set: Average loss: 0.1911
+Valid set: Average loss: 3.6220, Accuracy: 23409/42000 (56%)
+Took 4032.075717687607 seconds.
+Test set: Average loss: 1.3789, Top-1 Accuracy: 4621/6000 (77.0167%)
+Took 4033.125225543976 seconds.
+Test set: Average loss: 1.3789, Top-5 Accuracy: 5927.0/6000 (98.7833%)
+Took 4033.125225543976 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.132252
+Train set: Average loss: 0.1856
+Valid set: Average loss: 3.5671, Accuracy: 22530/42000 (54%)
+Took 4057.8034908771515 seconds.
+Test set: Average loss: 1.5279, Top-1 Accuracy: 4409/6000 (73.4833%)
+Took 4058.8521645069122 seconds.
+Test set: Average loss: 1.5279, Top-5 Accuracy: 5872.0/6000 (97.8667%)
+Took 4058.8521645069122 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.127613
+Train set: Average loss: 0.1713
+Valid set: Average loss: 3.2512, Accuracy: 23093/42000 (55%)
+Took 4083.1159393787384 seconds.
+Test set: Average loss: 1.5830, Top-1 Accuracy: 4446/6000 (74.1000%)
+Took 4084.1126379966736 seconds.
+Test set: Average loss: 1.5830, Top-5 Accuracy: 5777.0/6000 (96.2833%)
+Took 4084.1126379966736 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.151242
+Train set: Average loss: 0.1466
+Valid set: Average loss: 3.9970, Accuracy: 22346/42000 (53%)
+Took 4107.807925701141 seconds.
+Test set: Average loss: 1.4471, Top-1 Accuracy: 4564/6000 (76.0667%)
+Took 4108.81046628952 seconds.
+Test set: Average loss: 1.4471, Top-5 Accuracy: 5885.0/6000 (98.0833%)
+Took 4108.81046628952 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.132702
+Train set: Average loss: 0.1461
+Valid set: Average loss: 3.9250, Accuracy: 22090/42000 (53%)
+Took 4132.490290880203 seconds.
+Test set: Average loss: 1.7925, Top-1 Accuracy: 4340/6000 (72.3333%)
+Took 4133.500572443008 seconds.
+Test set: Average loss: 1.7925, Top-5 Accuracy: 5889.0/6000 (98.1500%)
+Took 4133.500572443008 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.157526
+Train set: Average loss: 0.1424
+Valid set: Average loss: 3.4898, Accuracy: 23167/42000 (55%)
+Took 4157.204257011414 seconds.
+Test set: Average loss: 1.2436, Top-1 Accuracy: 4655/6000 (77.5833%)
+Took 4158.207680940628 seconds.
+Test set: Average loss: 1.2436, Top-5 Accuracy: 5912.0/6000 (98.5333%)
+Took 4158.207680940628 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.124940
+Train set: Average loss: 0.1275
+Valid set: Average loss: 4.1554, Accuracy: 22537/42000 (54%)
+Took 4182.312565803528 seconds.
+Test set: Average loss: 1.6109, Top-1 Accuracy: 4499/6000 (74.9833%)
+Took 4183.33561372757 seconds.
+Test set: Average loss: 1.6109, Top-5 Accuracy: 5927.0/6000 (98.7833%)
+Took 4183.33561372757 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.116355
+Train set: Average loss: 0.1222
+Valid set: Average loss: 4.3389, Accuracy: 21885/42000 (52%)
+Took 4207.273430109024 seconds.
+Test set: Average loss: 1.4377, Top-1 Accuracy: 4613/6000 (76.8833%)
+Took 4208.278044462204 seconds.
+Test set: Average loss: 1.4377, Top-5 Accuracy: 5937.0/6000 (98.9500%)
+Took 4208.278044462204 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.115044
+Train set: Average loss: 0.1245
+Valid set: Average loss: 3.6847, Accuracy: 23872/42000 (57%)
+Took 4232.216008901596 seconds.
+Test set: Average loss: 1.1984, Top-1 Accuracy: 4833/6000 (80.5500%)
+Took 4233.239074230194 seconds.
+Test set: Average loss: 1.1984, Top-5 Accuracy: 5929.0/6000 (98.8167%)
+Took 4233.239074230194 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.114466
+Train set: Average loss: 0.1200
+Valid set: Average loss: 3.3511, Accuracy: 23739/42000 (57%)
+Took 4257.313112020493 seconds.
+Test set: Average loss: 1.3757, Top-1 Accuracy: 4680/6000 (78.0000%)
+Took 4258.334386348724 seconds.
+Test set: Average loss: 1.3757, Top-5 Accuracy: 5914.0/6000 (98.5667%)
+Took 4258.334386348724 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.114817
+Train set: Average loss: 0.1160
+Valid set: Average loss: 3.9477, Accuracy: 22606/42000 (54%)
+Took 4282.004608631134 seconds.
+Test set: Average loss: 1.7302, Top-1 Accuracy: 4475/6000 (74.5833%)
+Took 4283.008476495743 seconds.
+Test set: Average loss: 1.7302, Top-5 Accuracy: 5886.0/6000 (98.1000%)
+Took 4283.008476495743 seconds.
+
+----- Layer 1, Node 1, Epoch 24/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.117552
+Train set: Average loss: 0.1122
+Valid set: Average loss: 4.6330, Accuracy: 20839/42000 (50%)
+Took 4306.75071144104 seconds.
+Test set: Average loss: 2.2519, Top-1 Accuracy: 4156/6000 (69.2667%)
+Took 4307.755649805069 seconds.
+Test set: Average loss: 2.2519, Top-5 Accuracy: 5807.0/6000 (96.7833%)
+Took 4307.755649805069 seconds.
+
+----- Layer 1, Node 1, Epoch 25/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.126221
+Train set: Average loss: 0.1324
+Valid set: Average loss: 3.6562, Accuracy: 23476/42000 (56%)
+Took 4331.516370534897 seconds.
+Test set: Average loss: 1.4358, Top-1 Accuracy: 4642/6000 (77.3667%)
+Took 4332.676610946655 seconds.
+Test set: Average loss: 1.4358, Top-5 Accuracy: 5900.0/6000 (98.3333%)
+Took 4332.676610946655 seconds.
+
+----- Layer 1, Node 1, Epoch 26/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.028830
+Train set: Average loss: 0.0598
+Valid set: Average loss: 4.0228, Accuracy: 23490/42000 (56%)
+Took 4356.830986261368 seconds.
+Test set: Average loss: 1.3069, Top-1 Accuracy: 4747/6000 (79.1167%)
+Took 4357.841557025909 seconds.
+Test set: Average loss: 1.3069, Top-5 Accuracy: 5924.0/6000 (98.7333%)
+Took 4357.841557025909 seconds.
+
+----- Layer 1, Node 1, Epoch 27/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.010590
+Train set: Average loss: 0.0170
+Valid set: Average loss: 4.3515, Accuracy: 23224/42000 (55%)
+Took 4381.5932376384735 seconds.
+Test set: Average loss: 1.4627, Top-1 Accuracy: 4697/6000 (78.2833%)
+Took 4382.606431007385 seconds.
+Test set: Average loss: 1.4627, Top-5 Accuracy: 5909.0/6000 (98.4833%)
+Took 4382.606431007385 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.0768, Top-1 Accuracy: 4377/6000 (72.9500%)
+Took 4383.630449295044 seconds.
+Test set: Average loss: 1.0768, Top-5 Accuracy: 5890.0/6000 (98.1667%)
+Took 4383.630449295044 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 1.2112, Top-1 Accuracy: 4194/6000 (69.9000%)
+Took 4384.49501490593 seconds.
+Test set: Average loss: 1.2112, Top-5 Accuracy: 5675.0/6000 (94.5833%)
+Took 4384.49501490593 seconds.
+Test set: Average loss: 0.8629, Top-1 Accuracy: 4575/6000 (76.2500%)
+Took 4385.496333599091 seconds.
+Test set: Average loss: 0.8629, Top-5 Accuracy: 5895.0/6000 (98.2500%)
+Took 4385.496333599091 seconds.
+Test set: Average loss: 2.6994, Top-1 Accuracy: 2883/6000 (48.0500%)
+Took 4386.910140514374 seconds.
+Test set: Average loss: 2.6994, Top-5 Accuracy: 4894.0/6000 (81.5667%)
+Took 4386.910140514374 seconds.
+Test set: Average loss: 2.2008, Top-1 Accuracy: 3707/6000 (61.7833%)
+Took 4388.939825296402 seconds.
+Test set: Average loss: 2.2008, Top-5 Accuracy: 5173.0/6000 (86.2167%)
+Took 4388.939825296402 seconds.
+Test set: Average loss: 2.3753, Top-1 Accuracy: 3169/6000 (52.8167%)
+Took 4391.191534757614 seconds.
+Test set: Average loss: 2.3753, Top-5 Accuracy: 5242.0/6000 (87.3667%)
+Took 4391.191534757614 seconds.
+Test set: Average loss: 1.7181, Top-1 Accuracy: 3974/6000 (66.2333%)
+Took 4392.406467676163 seconds.
+Test set: Average loss: 1.7181, Top-5 Accuracy: 5460.0/6000 (91.0000%)
+Took 4392.406467676163 seconds.
+Test set: Average loss: 1.0768, Top-1 Accuracy: 4377/6000 (72.9500%)
+Took 4393.412616968155 seconds.
+Test set: Average loss: 1.0768, Top-5 Accuracy: 5890.0/6000 (98.1667%)
+Took 4393.412616968155 seconds.
+
+Average Top-1 accuracy: tensor(63.9976)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734, 64.9366683959961, 61.82221984863281, 63.99761962890625]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625, 91.93334197998047, 90.29722595214844, 91.02144622802734]
+============== Continual learning on task 7 =================
+
+[before adaption and growth]
+Test set: Average loss: 1.7247, Top-1 Accuracy: 4054/6000 (67.5667%)
+Took 4394.537904500961 seconds.
+Test set: Average loss: 1.7247, Top-5 Accuracy: 5407.0/6000 (90.1167%)
+Took 4394.537904500961 seconds.
+old_data shape: torch.Size([20000, 3072])
+new_data_1 shape: torch.Size([20000, 3072])
+MMD loss:tensor(0.2963, device='cuda:0')
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 1.7247, Top-1 Accuracy: 4054/6000 (67.5667%)
+Took 4404.852813005447 seconds.
+Test set: Average loss: 1.7247, Top-5 Accuracy: 5407.0/6000 (90.1167%)
+Took 4404.852813005447 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.520214
+Train set: Average loss: 0.6203
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.6326, Accuracy: 31060/48000 (65%)
+Took 4429.80429315567 seconds.
+Test set: Average loss: 0.7586, Top-1 Accuracy: 4752/6000 (79.2000%)
+Took 4430.816921710968 seconds.
+Test set: Average loss: 0.7586, Top-5 Accuracy: 5956.0/6000 (99.2667%)
+Took 4430.816921710968 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.405069
+Train set: Average loss: 0.4164
+Valid set: Average loss: 1.8978, Accuracy: 30367/48000 (63%)
+Took 4455.413528442383 seconds.
+Test set: Average loss: 0.8913, Top-1 Accuracy: 4726/6000 (78.7667%)
+Took 4456.4125328063965 seconds.
+Test set: Average loss: 0.8913, Top-5 Accuracy: 5922.0/6000 (98.7000%)
+Took 4456.4125328063965 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.335728
+Train set: Average loss: 0.3340
+Valid set: Average loss: 2.3066, Accuracy: 29680/48000 (62%)
+Took 4481.1832320690155 seconds.
+Test set: Average loss: 1.0870, Top-1 Accuracy: 4681/6000 (78.0167%)
+Took 4482.1810297966 seconds.
+Test set: Average loss: 1.0870, Top-5 Accuracy: 5915.0/6000 (98.5833%)
+Took 4482.1810297966 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.293505
+Train set: Average loss: 0.2963
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.0438, Accuracy: 31489/48000 (66%)
+Took 4507.649759531021 seconds.
+Test set: Average loss: 0.9444, Top-1 Accuracy: 4864/6000 (81.0667%)
+Took 4508.699557542801 seconds.
+Test set: Average loss: 0.9444, Top-5 Accuracy: 5956.0/6000 (99.2667%)
+Took 4508.699557542801 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.290256
+Train set: Average loss: 0.2814
+Valid set: Average loss: 2.1207, Accuracy: 30781/48000 (64%)
+Took 4534.750795841217 seconds.
+Test set: Average loss: 1.0258, Top-1 Accuracy: 4770/6000 (79.5000%)
+Took 4535.800415754318 seconds.
+Test set: Average loss: 1.0258, Top-5 Accuracy: 5941.0/6000 (99.0167%)
+Took 4535.800415754318 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.290858
+Train set: Average loss: 0.2884
+Valid set: Average loss: 2.5515, Accuracy: 28737/48000 (60%)
+Took 4561.456686735153 seconds.
+Test set: Average loss: 1.2211, Top-1 Accuracy: 4622/6000 (77.0333%)
+Took 4562.520491361618 seconds.
+Test set: Average loss: 1.2211, Top-5 Accuracy: 5888.0/6000 (98.1333%)
+Took 4562.520491361618 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.246225
+Train set: Average loss: 0.2642
+Valid set: Average loss: 2.6124, Accuracy: 29244/48000 (61%)
+Took 4587.885420322418 seconds.
+Test set: Average loss: 1.2897, Top-1 Accuracy: 4638/6000 (77.3000%)
+Took 4588.919188499451 seconds.
+Test set: Average loss: 1.2897, Top-5 Accuracy: 5882.0/6000 (98.0333%)
+Took 4588.919188499451 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.222293
+Train set: Average loss: 0.2243
+Valid set: Average loss: 2.1154, Accuracy: 31320/48000 (65%)
+Took 4614.634493350983 seconds.
+Test set: Average loss: 1.0823, Top-1 Accuracy: 4817/6000 (80.2833%)
+Took 4615.682422637939 seconds.
+Test set: Average loss: 1.0823, Top-5 Accuracy: 5926.0/6000 (98.7667%)
+Took 4615.682422637939 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.183897
+Train set: Average loss: 0.2015
+Valid set: Average loss: 2.1914, Accuracy: 30920/48000 (64%)
+Took 4641.46475481987 seconds.
+Test set: Average loss: 1.2427, Top-1 Accuracy: 4699/6000 (78.3167%)
+Took 4642.510411977768 seconds.
+Test set: Average loss: 1.2427, Top-5 Accuracy: 5894.0/6000 (98.2333%)
+Took 4642.510411977768 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.161402
+Train set: Average loss: 0.1672
+Valid set: Average loss: 2.3878, Accuracy: 30942/48000 (64%)
+Took 4668.22385931015 seconds.
+Test set: Average loss: 1.1000, Top-1 Accuracy: 4876/6000 (81.2667%)
+Took 4669.270567417145 seconds.
+Test set: Average loss: 1.1000, Top-5 Accuracy: 5932.0/6000 (98.8667%)
+Took 4669.270567417145 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.143671
+Train set: Average loss: 0.1474
+Valid set: Average loss: 2.9676, Accuracy: 29029/48000 (60%)
+Took 4694.998527765274 seconds.
+Test set: Average loss: 1.3710, Top-1 Accuracy: 4698/6000 (78.3000%)
+Took 4696.070363521576 seconds.
+Test set: Average loss: 1.3710, Top-5 Accuracy: 5892.0/6000 (98.2000%)
+Took 4696.070363521576 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.133391
+Train set: Average loss: 0.1322
+Valid set: Average loss: 3.2175, Accuracy: 29115/48000 (61%)
+Took 4721.800679922104 seconds.
+Test set: Average loss: 1.4816, Top-1 Accuracy: 4770/6000 (79.5000%)
+Took 4722.847444295883 seconds.
+Test set: Average loss: 1.4816, Top-5 Accuracy: 5933.0/6000 (98.8833%)
+Took 4722.847444295883 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.109887
+Train set: Average loss: 0.1324
+Valid set: Average loss: 2.6196, Accuracy: 30770/48000 (64%)
+Took 4748.589749574661 seconds.
+Test set: Average loss: 1.1970, Top-1 Accuracy: 4904/6000 (81.7333%)
+Took 4749.6352026462555 seconds.
+Test set: Average loss: 1.1970, Top-5 Accuracy: 5924.0/6000 (98.7333%)
+Took 4749.6352026462555 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.124683
+Train set: Average loss: 0.1404
+Valid set: Average loss: 2.6614, Accuracy: 30305/48000 (63%)
+Took 4775.007306814194 seconds.
+Test set: Average loss: 1.3805, Top-1 Accuracy: 4797/6000 (79.9500%)
+Took 4776.033960103989 seconds.
+Test set: Average loss: 1.3805, Top-5 Accuracy: 5862.0/6000 (97.7000%)
+Took 4776.033960103989 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.141694
+Train set: Average loss: 0.1365
+Valid set: Average loss: 2.6451, Accuracy: 30031/48000 (63%)
+Took 4801.451549053192 seconds.
+Test set: Average loss: 1.1621, Top-1 Accuracy: 4851/6000 (80.8500%)
+Took 4802.478885412216 seconds.
+Test set: Average loss: 1.1621, Top-5 Accuracy: 5911.0/6000 (98.5167%)
+Took 4802.478885412216 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.143317
+Train set: Average loss: 0.1297
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 2.1947, Accuracy: 31996/48000 (67%)
+Took 4827.617044210434 seconds.
+Test set: Average loss: 1.1221, Top-1 Accuracy: 4893/6000 (81.5500%)
+Took 4828.641246318817 seconds.
+Test set: Average loss: 1.1221, Top-5 Accuracy: 5933.0/6000 (98.8833%)
+Took 4828.641246318817 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.112219
+Train set: Average loss: 0.1052
+Valid set: Average loss: 2.6121, Accuracy: 30539/48000 (64%)
+Took 4853.650088787079 seconds.
+Test set: Average loss: 1.3832, Top-1 Accuracy: 4769/6000 (79.4833%)
+Took 4854.668330907822 seconds.
+Test set: Average loss: 1.3832, Top-5 Accuracy: 5873.0/6000 (97.8833%)
+Took 4854.668330907822 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.133346
+Train set: Average loss: 0.1103
+Valid set: Average loss: 2.8958, Accuracy: 29014/48000 (60%)
+Took 4879.664842128754 seconds.
+Test set: Average loss: 1.5653, Top-1 Accuracy: 4618/6000 (76.9667%)
+Took 4880.684896707535 seconds.
+Test set: Average loss: 1.5653, Top-5 Accuracy: 5842.0/6000 (97.3667%)
+Took 4880.684896707535 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.113955
+Train set: Average loss: 0.1131
+Valid set: Average loss: 2.8319, Accuracy: 29954/48000 (62%)
+Took 4905.718058824539 seconds.
+Test set: Average loss: 1.1205, Top-1 Accuracy: 4936/6000 (82.2667%)
+Took 4906.7407240867615 seconds.
+Test set: Average loss: 1.1205, Top-5 Accuracy: 5931.0/6000 (98.8500%)
+Took 4906.7407240867615 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.109129
+Train set: Average loss: 0.1153
+Valid set: Average loss: 3.0294, Accuracy: 29494/48000 (61%)
+Took 4931.7507584095 seconds.
+Test set: Average loss: 1.2667, Top-1 Accuracy: 4870/6000 (81.1667%)
+Took 4932.767661809921 seconds.
+Test set: Average loss: 1.2667, Top-5 Accuracy: 5950.0/6000 (99.1667%)
+Took 4932.767661809921 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.096509
+Train set: Average loss: 0.0988
+Valid set: Average loss: 3.2736, Accuracy: 28805/48000 (60%)
+Took 4957.76350569725 seconds.
+Test set: Average loss: 1.3544, Top-1 Accuracy: 4881/6000 (81.3500%)
+Took 4958.781447172165 seconds.
+Test set: Average loss: 1.3544, Top-5 Accuracy: 5909.0/6000 (98.4833%)
+Took 4958.781447172165 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.078689
+Train set: Average loss: 0.0870
+Valid set: Average loss: 3.2908, Accuracy: 29031/48000 (60%)
+Took 4983.920620203018 seconds.
+Test set: Average loss: 1.4123, Top-1 Accuracy: 4854/6000 (80.9000%)
+Took 4984.938078165054 seconds.
+Test set: Average loss: 1.4123, Top-5 Accuracy: 5895.0/6000 (98.2500%)
+Took 4984.938078165054 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.1221, Top-1 Accuracy: 4893/6000 (81.5500%)
+Took 4985.9782700538635 seconds.
+Test set: Average loss: 1.1221, Top-5 Accuracy: 5933.0/6000 (98.8833%)
+Took 4985.9782700538635 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 1.5345, Top-1 Accuracy: 4363/6000 (72.7167%)
+Took 4986.858891963959 seconds.
+Test set: Average loss: 1.5345, Top-5 Accuracy: 5615.0/6000 (93.5833%)
+Took 4986.858891963959 seconds.
+Test set: Average loss: 0.9027, Top-1 Accuracy: 5076/6000 (84.6000%)
+Took 4987.875869274139 seconds.
+Test set: Average loss: 0.9027, Top-5 Accuracy: 5870.0/6000 (97.8333%)
+Took 4987.875869274139 seconds.
+Test set: Average loss: 2.1164, Top-1 Accuracy: 3509/6000 (58.4833%)
+Took 4989.311080694199 seconds.
+Test set: Average loss: 2.1164, Top-5 Accuracy: 5714.0/6000 (95.2333%)
+Took 4989.311080694199 seconds.
+Test set: Average loss: 2.2592, Top-1 Accuracy: 3959/6000 (65.9833%)
+Took 4991.3665137290955 seconds.
+Test set: Average loss: 2.2592, Top-5 Accuracy: 5427.0/6000 (90.4500%)
+Took 4991.3665137290955 seconds.
+Test set: Average loss: 3.3447, Top-1 Accuracy: 2915/6000 (48.5833%)
+Took 4993.649902582169 seconds.
+Test set: Average loss: 3.3447, Top-5 Accuracy: 5257.0/6000 (87.6167%)
+Took 4993.649902582169 seconds.
+Test set: Average loss: 1.8324, Top-1 Accuracy: 4364/6000 (72.7333%)
+Took 4994.861930370331 seconds.
+Test set: Average loss: 1.8324, Top-5 Accuracy: 5592.0/6000 (93.2000%)
+Took 4994.861930370331 seconds.
+Test set: Average loss: 3.3043, Top-1 Accuracy: 3529/6000 (58.8167%)
+Took 4995.8826904296875 seconds.
+Test set: Average loss: 3.3043, Top-5 Accuracy: 5639.0/6000 (93.9833%)
+Took 4995.8826904296875 seconds.
+Test set: Average loss: 1.1221, Top-1 Accuracy: 4893/6000 (81.5500%)
+Took 4996.899837732315 seconds.
+Test set: Average loss: 1.1221, Top-5 Accuracy: 5933.0/6000 (98.8833%)
+Took 4996.899837732315 seconds.
+
+Average Top-1 accuracy: tensor(67.9333)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734, 64.9366683959961, 61.82221984863281, 63.99761962890625, 67.93333435058594]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625, 91.93334197998047, 90.29722595214844, 91.02144622802734, 93.84791564941406]
+============== Continual learning on task 8 =================
+
+[before adaption and growth]
+Test set: Average loss: 2.9812, Top-1 Accuracy: 2577/6000 (42.9500%)
+Took 4998.472496509552 seconds.
+Test set: Average loss: 2.9812, Top-5 Accuracy: 5135.0/6000 (85.5833%)
+Took 4998.472496509552 seconds.
+old_data shape: torch.Size([15000, 3072])
+new_data_1 shape: torch.Size([15000, 3072])
+MMD loss:tensor(1.3514, device='cuda:0')
+
+ ------------ start adaptation .............
+--------- Task 8, DA Epoch 1/15 ---------
+              [12800/30000 (0%)]      Loss: 6.077176
+Train set: Average loss: 2.7979
+Test set: Average loss: 3.8113, Top-1 Accuracy: 2621/6000 (43.6833%)
+Took 5015.450091838837 seconds.
+Test set: Average loss: 3.8113, Top-5 Accuracy: 5075.0/6000 (84.5833%)
+Took 5015.450091838837 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 8, DA Epoch 2/15 ---------
+              [12800/30000 (0%)]      Loss: 6.030564
+Train set: Average loss: 2.7681
+Test set: Average loss: 3.7835, Top-1 Accuracy: 2624/6000 (43.7333%)
+Took 5025.066277980804 seconds.
+Test set: Average loss: 3.7835, Top-5 Accuracy: 5066.0/6000 (84.4333%)
+Took 5025.066277980804 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 8, DA Epoch 3/15 ---------
+              [12800/30000 (0%)]      Loss: 5.988764
+Train set: Average loss: 2.7412
+Test set: Average loss: 3.7532, Top-1 Accuracy: 2638/6000 (43.9667%)
+Took 5034.6896386146545 seconds.
+Test set: Average loss: 3.7532, Top-5 Accuracy: 5063.0/6000 (84.3833%)
+Took 5034.6896386146545 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 8, DA Epoch 4/15 ---------
+              [12800/30000 (0%)]      Loss: 5.950478
+Train set: Average loss: 2.7158
+Test set: Average loss: 3.7258, Top-1 Accuracy: 2650/6000 (44.1667%)
+Took 5044.317000389099 seconds.
+Test set: Average loss: 3.7258, Top-5 Accuracy: 5045.0/6000 (84.0833%)
+Took 5044.317000389099 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 8, DA Epoch 5/15 ---------
+              [12800/30000 (0%)]      Loss: 5.914659
+Train set: Average loss: 2.6915
+Test set: Average loss: 3.7039, Top-1 Accuracy: 2659/6000 (44.3167%)
+Took 5054.011598348618 seconds.
+Test set: Average loss: 3.7039, Top-5 Accuracy: 5039.0/6000 (83.9833%)
+Took 5054.011598348618 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 8, DA Epoch 6/15 ---------
+              [12800/30000 (0%)]      Loss: 5.880667
+Train set: Average loss: 2.6682
+Test set: Average loss: 3.6874, Top-1 Accuracy: 2662/6000 (44.3667%)
+Took 5063.839429140091 seconds.
+Test set: Average loss: 3.6874, Top-5 Accuracy: 5036.0/6000 (83.9333%)
+Took 5063.839429140091 seconds.
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_temp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_temp.json
+--------- Task 8, DA Epoch 7/15 ---------
+              [12800/30000 (0%)]      Loss: 5.846837
+Train set: Average loss: 2.6459
+Test set: Average loss: 3.6776, Top-1 Accuracy: 2649/6000 (44.1500%)
+Took 5073.657123088837 seconds.
+Test set: Average loss: 3.6776, Top-5 Accuracy: 5031.0/6000 (83.8500%)
+Took 5073.657123088837 seconds.
+--------- Task 8, DA Epoch 8/15 ---------
+              [12800/30000 (0%)]      Loss: 5.816485
+Train set: Average loss: 2.6254
+Test set: Average loss: 3.6682, Top-1 Accuracy: 2651/6000 (44.1833%)
+Took 5083.461755990982 seconds.
+Test set: Average loss: 3.6682, Top-5 Accuracy: 5025.0/6000 (83.7500%)
+Took 5083.461755990982 seconds.
+--------- Task 8, DA Epoch 9/15 ---------
+              [12800/30000 (0%)]      Loss: 5.786339
+Train set: Average loss: 2.6062
+Test set: Average loss: 3.6608, Top-1 Accuracy: 2648/6000 (44.1333%)
+Took 5093.217761039734 seconds.
+Test set: Average loss: 3.6608, Top-5 Accuracy: 5022.0/6000 (83.7000%)
+Took 5093.217761039734 seconds.
+--------- Task 8, DA Epoch 10/15 ---------
+              [12800/30000 (0%)]      Loss: 5.757446
+Train set: Average loss: 2.5884
+Test set: Average loss: 3.6573, Top-1 Accuracy: 2656/6000 (44.2667%)
+Took 5102.997360706329 seconds.
+Test set: Average loss: 3.6573, Top-5 Accuracy: 5013.0/6000 (83.5500%)
+Took 5102.997360706329 seconds.
+--------- Task 8, DA Epoch 11/15 ---------
+              [12800/30000 (0%)]      Loss: 5.728795
+Train set: Average loss: 2.5716
+Test set: Average loss: 3.6588, Top-1 Accuracy: 2639/6000 (43.9833%)
+Took 5112.702033281326 seconds.
+Test set: Average loss: 3.6588, Top-5 Accuracy: 5014.0/6000 (83.5667%)
+Took 5112.702033281326 seconds.
+--------- Task 8, DA Epoch 12/15 ---------
+              [12800/30000 (0%)]      Loss: 5.701008
+Train set: Average loss: 2.5550
+Test set: Average loss: 3.6628, Top-1 Accuracy: 2635/6000 (43.9167%)
+Took 5122.436531305313 seconds.
+Test set: Average loss: 3.6628, Top-5 Accuracy: 5007.0/6000 (83.4500%)
+Took 5122.436531305313 seconds.
+--------- Task 8, DA Epoch 13/15 ---------
+              [12800/30000 (0%)]      Loss: 5.675092
+Train set: Average loss: 2.5387
+Test set: Average loss: 3.6722, Top-1 Accuracy: 2630/6000 (43.8333%)
+Took 5132.064138889313 seconds.
+Test set: Average loss: 3.6722, Top-5 Accuracy: 5001.0/6000 (83.3500%)
+Took 5132.064138889313 seconds.
+--------- Task 8, DA Epoch 14/15 ---------
+              [12800/30000 (0%)]      Loss: 5.653055
+Train set: Average loss: 2.5232
+Test set: Average loss: 3.6835, Top-1 Accuracy: 2627/6000 (43.7833%)
+Took 5141.658115386963 seconds.
+Test set: Average loss: 3.6835, Top-5 Accuracy: 4994.0/6000 (83.2333%)
+Took 5141.658115386963 seconds.
+--------- Task 8, DA Epoch 15/15 ---------
+              [12800/30000 (0%)]      Loss: 5.632649
+Train set: Average loss: 2.5087
+Test set: Average loss: 3.6901, Top-1 Accuracy: 2621/6000 (43.6833%)
+Took 5151.243443250656 seconds.
+Test set: Average loss: 3.6901, Top-5 Accuracy: 4983.0/6000 (83.0500%)
+Took 5151.243443250656 seconds.
+[after adaption and growth]
+Test set: Average loss: 3.6874, Top-1 Accuracy: 2662/6000 (44.3667%)
+Took 5152.83712553978 seconds.
+Test set: Average loss: 3.6874, Top-5 Accuracy: 5036.0/6000 (83.9333%)
+Took 5152.83712553978 seconds.
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 3.6874, Top-1 Accuracy: 2662/6000 (44.3667%)
+Took 5155.747884750366 seconds.
+Test set: Average loss: 3.6874, Top-5 Accuracy: 5036.0/6000 (83.9333%)
+Took 5155.747884750366 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.895784
+Train set: Average loss: 1.1007
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 4.4946, Accuracy: 22279/54000 (41%)
+Took 5184.387659549713 seconds.
+Test set: Average loss: 0.9759, Top-1 Accuracy: 4203/6000 (70.0500%)
+Took 5185.823268890381 seconds.
+Test set: Average loss: 0.9759, Top-5 Accuracy: 5870.0/6000 (97.8333%)
+Took 5185.823268890381 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.652859
+Train set: Average loss: 0.6890
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 4.4301, Accuracy: 23529/54000 (44%)
+Took 5214.512167453766 seconds.
+Test set: Average loss: 0.9388, Top-1 Accuracy: 4395/6000 (73.2500%)
+Took 5215.9548218250275 seconds.
+Test set: Average loss: 0.9388, Top-5 Accuracy: 5915.0/6000 (98.5833%)
+Took 5215.9548218250275 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.523245
+Train set: Average loss: 0.5375
+Valid set: Average loss: 5.7445, Accuracy: 23287/54000 (43%)
+Took 5244.623760461807 seconds.
+Test set: Average loss: 1.0359, Top-1 Accuracy: 4384/6000 (73.0667%)
+Took 5246.074460983276 seconds.
+Test set: Average loss: 1.0359, Top-5 Accuracy: 5928.0/6000 (98.8000%)
+Took 5246.074460983276 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.417140
+Train set: Average loss: 0.4459
+Valid set: Average loss: 6.4062, Accuracy: 23403/54000 (43%)
+Took 5275.541630029678 seconds.
+Test set: Average loss: 1.0178, Top-1 Accuracy: 4473/6000 (74.5500%)
+Took 5277.038290262222 seconds.
+Test set: Average loss: 1.0178, Top-5 Accuracy: 5933.0/6000 (98.8833%)
+Took 5277.038290262222 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.389513
+Train set: Average loss: 0.3901
+Valid set: Average loss: 6.9458, Accuracy: 22137/54000 (41%)
+Took 5306.6834628582 seconds.
+Test set: Average loss: 1.3621, Top-1 Accuracy: 4234/6000 (70.5667%)
+Took 5308.177622079849 seconds.
+Test set: Average loss: 1.3621, Top-5 Accuracy: 5890.0/6000 (98.1667%)
+Took 5308.177622079849 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.377977
+Train set: Average loss: 0.3724
+Valid set: Average loss: 7.9966, Accuracy: 20010/54000 (37%)
+Took 5337.997862815857 seconds.
+Test set: Average loss: 1.7154, Top-1 Accuracy: 3976/6000 (66.2667%)
+Took 5339.510520458221 seconds.
+Test set: Average loss: 1.7154, Top-5 Accuracy: 5852.0/6000 (97.5333%)
+Took 5339.510520458221 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.334888
+Train set: Average loss: 0.3471
+Valid set: Average loss: 6.7238, Accuracy: 22268/54000 (41%)
+Took 5369.58486700058 seconds.
+Test set: Average loss: 1.3953, Top-1 Accuracy: 4299/6000 (71.6500%)
+Took 5371.091269731522 seconds.
+Test set: Average loss: 1.3953, Top-5 Accuracy: 5886.0/6000 (98.1000%)
+Took 5371.091269731522 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.300316
+Train set: Average loss: 0.3251
+Valid set: Average loss: 6.3288, Accuracy: 22954/54000 (43%)
+Took 5401.108204603195 seconds.
+Test set: Average loss: 1.7493, Top-1 Accuracy: 4174/6000 (69.5667%)
+Took 5402.618250846863 seconds.
+Test set: Average loss: 1.7493, Top-5 Accuracy: 5858.0/6000 (97.6333%)
+Took 5402.618250846863 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.306612
+Train set: Average loss: 0.3174
+Valid set: Average loss: 6.9237, Accuracy: 22872/54000 (42%)
+Took 5434.567663908005 seconds.
+Test set: Average loss: 1.6365, Top-1 Accuracy: 4212/6000 (70.2000%)
+Took 5436.154944658279 seconds.
+Test set: Average loss: 1.6365, Top-5 Accuracy: 5860.0/6000 (97.6667%)
+Took 5436.154944658279 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.270629
+Train set: Average loss: 0.2835
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 6.4377, Accuracy: 23622/54000 (44%)
+Took 5465.024095058441 seconds.
+Test set: Average loss: 1.7272, Top-1 Accuracy: 4223/6000 (70.3833%)
+Took 5466.477911472321 seconds.
+Test set: Average loss: 1.7272, Top-5 Accuracy: 5827.0/6000 (97.1167%)
+Took 5466.477911472321 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.247528
+Train set: Average loss: 0.2686
+Valid set: Average loss: 7.4204, Accuracy: 22822/54000 (42%)
+Took 5495.363089084625 seconds.
+Test set: Average loss: 1.8820, Top-1 Accuracy: 4152/6000 (69.2000%)
+Took 5496.820209741592 seconds.
+Test set: Average loss: 1.8820, Top-5 Accuracy: 5819.0/6000 (96.9833%)
+Took 5496.820209741592 seconds.
+
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.267321
+Train set: Average loss: 0.2495
+Valid set: Average loss: 6.9980, Accuracy: 22967/54000 (43%)
+Took 5526.2687385082245 seconds.
+Test set: Average loss: 1.7416, Top-1 Accuracy: 4126/6000 (68.7667%)
+Took 5527.725987195969 seconds.
+Test set: Average loss: 1.7416, Top-5 Accuracy: 5881.0/6000 (98.0167%)
+Took 5527.725987195969 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.218811
+Train set: Average loss: 0.2066
+Valid set: Average loss: 8.3657, Accuracy: 22630/54000 (42%)
+Took 5556.9132289886475 seconds.
+Test set: Average loss: 1.4687, Top-1 Accuracy: 4439/6000 (73.9833%)
+Took 5558.365495443344 seconds.
+Test set: Average loss: 1.4687, Top-5 Accuracy: 5895.0/6000 (98.2500%)
+Took 5558.365495443344 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.175220
+Train set: Average loss: 0.1810
+Valid set: Average loss: 8.3657, Accuracy: 22773/54000 (42%)
+Took 5587.376430988312 seconds.
+Test set: Average loss: 1.8535, Top-1 Accuracy: 4320/6000 (72.0000%)
+Took 5588.842974901199 seconds.
+Test set: Average loss: 1.8535, Top-5 Accuracy: 5876.0/6000 (97.9333%)
+Took 5588.842974901199 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.156589
+Train set: Average loss: 0.1715
+Valid set: Average loss: 9.3215, Accuracy: 22351/54000 (41%)
+Took 5617.776282548904 seconds.
+Test set: Average loss: 1.5771, Top-1 Accuracy: 4418/6000 (73.6333%)
+Took 5619.22872543335 seconds.
+Test set: Average loss: 1.5771, Top-5 Accuracy: 5900.0/6000 (98.3333%)
+Took 5619.22872543335 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.155261
+Train set: Average loss: 0.1727
+Valid set: Average loss: 10.9317, Accuracy: 19917/54000 (37%)
+Took 5648.123050689697 seconds.
+Test set: Average loss: 1.5948, Top-1 Accuracy: 4421/6000 (73.6833%)
+Took 5649.5847001075745 seconds.
+Test set: Average loss: 1.5948, Top-5 Accuracy: 5873.0/6000 (97.8833%)
+Took 5649.5847001075745 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.160774
+Train set: Average loss: 0.1683
+Valid set: Average loss: 10.5857, Accuracy: 20844/54000 (39%)
+Took 5680.040185213089 seconds.
+Test set: Average loss: 1.8394, Top-1 Accuracy: 4385/6000 (73.0833%)
+Took 5681.578852653503 seconds.
+Test set: Average loss: 1.8394, Top-5 Accuracy: 5850.0/6000 (97.5000%)
+Took 5681.578852653503 seconds.
+
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.156290
+Train set: Average loss: 0.1718
+Valid set: Average loss: 11.7756, Accuracy: 19158/54000 (35%)
+Took 5711.255992412567 seconds.
+Test set: Average loss: 1.6232, Top-1 Accuracy: 4435/6000 (73.9167%)
+Took 5712.747154712677 seconds.
+Test set: Average loss: 1.6232, Top-5 Accuracy: 5840.0/6000 (97.3333%)
+Took 5712.747154712677 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.153485
+Train set: Average loss: 0.1720
+Valid set: Average loss: 10.2316, Accuracy: 21249/54000 (39%)
+Took 5741.692795991898 seconds.
+Test set: Average loss: 1.6906, Top-1 Accuracy: 4439/6000 (73.9833%)
+Took 5743.162080287933 seconds.
+Test set: Average loss: 1.6906, Top-5 Accuracy: 5882.0/6000 (98.0333%)
+Took 5743.162080287933 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.119318
+Train set: Average loss: 0.1590
+Valid set: Average loss: 8.8262, Accuracy: 21807/54000 (40%)
+Took 5772.142028570175 seconds.
+Test set: Average loss: 2.6006, Top-1 Accuracy: 3995/6000 (66.5833%)
+Took 5773.583056688309 seconds.
+Test set: Average loss: 2.6006, Top-5 Accuracy: 5799.0/6000 (96.6500%)
+Took 5773.583056688309 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.116280
+Train set: Average loss: 0.1341
+Valid set: Average loss: 10.0204, Accuracy: 21276/54000 (39%)
+Took 5802.114386796951 seconds.
+Test set: Average loss: 1.8109, Top-1 Accuracy: 4331/6000 (72.1833%)
+Took 5803.557146549225 seconds.
+Test set: Average loss: 1.8109, Top-5 Accuracy: 5891.0/6000 (98.1833%)
+Took 5803.557146549225 seconds.
+
+----- Layer 1, Node 1, Epoch 22/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.120808
+Train set: Average loss: 0.1230
+Valid set: Average loss: 7.9433, Accuracy: 23520/54000 (44%)
+Took 5833.178851604462 seconds.
+Test set: Average loss: 1.9679, Top-1 Accuracy: 4295/6000 (71.5833%)
+Took 5834.624846935272 seconds.
+Test set: Average loss: 1.9679, Top-5 Accuracy: 5868.0/6000 (97.8000%)
+Took 5834.624846935272 seconds.
+
+----- Layer 1, Node 1, Epoch 23/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.102832
+Train set: Average loss: 0.1120
+Valid set: Average loss: 8.6719, Accuracy: 23175/54000 (43%)
+Took 5864.651826381683 seconds.
+Test set: Average loss: 1.7974, Top-1 Accuracy: 4419/6000 (73.6500%)
+Took 5866.2031264305115 seconds.
+Test set: Average loss: 1.7974, Top-5 Accuracy: 5891.0/6000 (98.1833%)
+Took 5866.2031264305115 seconds.
+
+----- Layer 1, Node 1, Epoch 24/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.095989
+Train set: Average loss: 0.1049
+Valid set: Average loss: 9.1153, Accuracy: 22973/54000 (43%)
+Took 5897.049774646759 seconds.
+Test set: Average loss: 2.7462, Top-1 Accuracy: 4109/6000 (68.4833%)
+Took 5898.595050811768 seconds.
+Test set: Average loss: 2.7462, Top-5 Accuracy: 5820.0/6000 (97.0000%)
+Took 5898.595050811768 seconds.
+
+----- Layer 1, Node 1, Epoch 25/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.069810
+Train set: Average loss: 0.0906
+Valid set: Average loss: 8.9990, Accuracy: 23260/54000 (43%)
+Took 5928.210851430893 seconds.
+Test set: Average loss: 2.2682, Top-1 Accuracy: 4300/6000 (71.6667%)
+Took 5929.664469242096 seconds.
+Test set: Average loss: 2.2682, Top-5 Accuracy: 5778.0/6000 (96.3000%)
+Took 5929.664469242096 seconds.
+
+----- Layer 1, Node 1, Epoch 26/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.025208
+Train set: Average loss: 0.0502
+Valid set: Average loss: 9.7119, Accuracy: 22608/54000 (42%)
+Took 5958.410006046295 seconds.
+Test set: Average loss: 1.6817, Top-1 Accuracy: 4583/6000 (76.3833%)
+Took 5959.860963106155 seconds.
+Test set: Average loss: 1.6817, Top-5 Accuracy: 5887.0/6000 (98.1167%)
+Took 5959.860963106155 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 1.7272, Top-1 Accuracy: 4223/6000 (70.3833%)
+Took 5961.402024745941 seconds.
+Test set: Average loss: 1.7272, Top-5 Accuracy: 5827.0/6000 (97.1167%)
+Took 5961.402024745941 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 2.1680, Top-1 Accuracy: 3740/6000 (62.3333%)
+Took 5962.365767717361 seconds.
+Test set: Average loss: 2.1680, Top-5 Accuracy: 5405.0/6000 (90.0833%)
+Took 5962.365767717361 seconds.
+Test set: Average loss: 1.7269, Top-1 Accuracy: 4369/6000 (72.8167%)
+Took 5963.4862558841705 seconds.
+Test set: Average loss: 1.7269, Top-5 Accuracy: 5614.0/6000 (93.5667%)
+Took 5963.4862558841705 seconds.
+Test set: Average loss: 2.9077, Top-1 Accuracy: 3090/6000 (51.5000%)
+Took 5965.057117462158 seconds.
+Test set: Average loss: 2.9077, Top-5 Accuracy: 5152.0/6000 (85.8667%)
+Took 5965.057117462158 seconds.
+Test set: Average loss: 1.9010, Top-1 Accuracy: 4158/6000 (69.3000%)
+Took 5967.261575222015 seconds.
+Test set: Average loss: 1.9010, Top-5 Accuracy: 5683.0/6000 (94.7167%)
+Took 5967.261575222015 seconds.
+Test set: Average loss: 2.1356, Top-1 Accuracy: 3725/6000 (62.0833%)
+Took 5969.642306566238 seconds.
+Test set: Average loss: 2.1356, Top-5 Accuracy: 5777.0/6000 (96.2833%)
+Took 5969.642306566238 seconds.
+Test set: Average loss: 2.2033, Top-1 Accuracy: 4070/6000 (67.8333%)
+Took 5970.871768712997 seconds.
+Test set: Average loss: 2.2033, Top-5 Accuracy: 5398.0/6000 (89.9667%)
+Took 5970.871768712997 seconds.
+Test set: Average loss: 3.8030, Top-1 Accuracy: 2841/6000 (47.3500%)
+Took 5971.898621559143 seconds.
+Test set: Average loss: 3.8030, Top-5 Accuracy: 5165.0/6000 (86.0833%)
+Took 5971.898621559143 seconds.
+Test set: Average loss: 2.1501, Top-1 Accuracy: 4220/6000 (70.3333%)
+Took 5972.927978277206 seconds.
+Test set: Average loss: 2.1501, Top-5 Accuracy: 5616.0/6000 (93.6000%)
+Took 5972.927978277206 seconds.
+Test set: Average loss: 1.7272, Top-1 Accuracy: 4223/6000 (70.3833%)
+Took 5974.37225317955 seconds.
+Test set: Average loss: 1.7272, Top-5 Accuracy: 5827.0/6000 (97.1167%)
+Took 5974.37225317955 seconds.
+
+Average Top-1 accuracy: tensor(63.7704)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734, 64.9366683959961, 61.82221984863281, 63.99761962890625, 67.93333435058594, 63.77037048339844]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625, 91.93334197998047, 90.29722595214844, 91.02144622802734, 93.84791564941406, 91.92037200927734]
+============== Continual learning on task 9 =================
+
+[before adaption and growth]
+Test set: Average loss: 4.8006, Top-1 Accuracy: 2976/6000 (49.6000%)
+Took 5975.375388145447 seconds.
+Test set: Average loss: 4.8006, Top-5 Accuracy: 5402.0/6000 (90.0333%)
+Took 5975.375388145447 seconds.
+old_data shape: torch.Size([10000, 3072])
+new_data_1 shape: torch.Size([10000, 3072])
+MMD loss:tensor(0.0129, device='cuda:0')
+ ------ leaf nodes and corresponding confidence:
+[2]
+tensor([1.], device='cuda:0')
+[2]
+
+
+------------------- Fine-tuning the tree --------------------
+Test set: Average loss: 4.8006, Top-1 Accuracy: 2976/6000 (49.6000%)
+Took 5981.277619361877 seconds.
+Test set: Average loss: 4.8006, Top-5 Accuracy: 5402.0/6000 (90.0333%)
+Took 5981.277619361877 seconds.
+False
+False
+False
+
+Perform global training
+
+----- Layer 1, Node 1, Epoch 1/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.490651
+Train set: Average loss: 0.6049
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_tmp.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_tmp.json
+Valid set: Average loss: 1.8168, Accuracy: 37192/60000 (62%)
+Took 6009.14019370079 seconds.
+Test set: Average loss: 0.8232, Top-1 Accuracy: 4583/6000 (76.3833%)
+Took 6010.027601003647 seconds.
+Test set: Average loss: 0.8232, Top-5 Accuracy: 5940.0/6000 (99.0000%)
+Took 6010.027601003647 seconds.
+
+----- Layer 1, Node 1, Epoch 2/30, Patience 1/15---------
+              [56320/60000 (0%)]      Loss: 0.295492
+Train set: Average loss: 0.3371
+Valid set: Average loss: 2.2730, Accuracy: 36865/60000 (61%)
+Took 6036.903670549393 seconds.
+Test set: Average loss: 1.2635, Top-1 Accuracy: 4384/6000 (73.0667%)
+Took 6037.789539575577 seconds.
+Test set: Average loss: 1.2635, Top-5 Accuracy: 5941.0/6000 (99.0167%)
+Took 6037.789539575577 seconds.
+
+----- Layer 1, Node 1, Epoch 3/30, Patience 2/15---------
+              [56320/60000 (0%)]      Loss: 0.214732
+Train set: Average loss: 0.2328
+Valid set: Average loss: 2.9121, Accuracy: 35238/60000 (59%)
+Took 6064.736120462418 seconds.
+Test set: Average loss: 1.4365, Top-1 Accuracy: 4385/6000 (73.0833%)
+Took 6065.622084140778 seconds.
+Test set: Average loss: 1.4365, Top-5 Accuracy: 5896.0/6000 (98.2667%)
+Took 6065.622084140778 seconds.
+
+----- Layer 1, Node 1, Epoch 4/30, Patience 3/15---------
+              [56320/60000 (0%)]      Loss: 0.192299
+Train set: Average loss: 0.1977
+Valid set: Average loss: 3.0058, Accuracy: 35462/60000 (59%)
+Took 6092.509204864502 seconds.
+Test set: Average loss: 1.5928, Top-1 Accuracy: 4355/6000 (72.5833%)
+Took 6093.392656087875 seconds.
+Test set: Average loss: 1.5928, Top-5 Accuracy: 5883.0/6000 (98.0500%)
+Took 6093.392656087875 seconds.
+
+----- Layer 1, Node 1, Epoch 5/30, Patience 4/15---------
+              [56320/60000 (0%)]      Loss: 0.231145
+Train set: Average loss: 0.1836
+Valid set: Average loss: 3.4390, Accuracy: 31831/60000 (53%)
+Took 6120.243758201599 seconds.
+Test set: Average loss: 1.4428, Top-1 Accuracy: 4431/6000 (73.8500%)
+Took 6121.133914232254 seconds.
+Test set: Average loss: 1.4428, Top-5 Accuracy: 5861.0/6000 (97.6833%)
+Took 6121.133914232254 seconds.
+
+----- Layer 1, Node 1, Epoch 6/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.203629
+Train set: Average loss: 0.1677
+Valid set: Average loss: 2.9879, Accuracy: 34412/60000 (57%)
+Took 6148.006036520004 seconds.
+Test set: Average loss: 1.5067, Top-1 Accuracy: 4471/6000 (74.5167%)
+Took 6148.891040802002 seconds.
+Test set: Average loss: 1.5067, Top-5 Accuracy: 5912.0/6000 (98.5333%)
+Took 6148.891040802002 seconds.
+
+----- Layer 1, Node 1, Epoch 7/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.180518
+Train set: Average loss: 0.1712
+Valid set: Average loss: 2.3478, Accuracy: 37187/60000 (62%)
+Took 6175.708699703217 seconds.
+Test set: Average loss: 1.5331, Top-1 Accuracy: 4301/6000 (71.6833%)
+Took 6176.594450235367 seconds.
+Test set: Average loss: 1.5331, Top-5 Accuracy: 5874.0/6000 (97.9000%)
+Took 6176.594450235367 seconds.
+
+----- Layer 1, Node 1, Epoch 8/30, Patience 5/15---------
+              [56320/60000 (0%)]      Loss: 0.110557
+Train set: Average loss: 0.1463
+Valid set: Average loss: 2.6978, Accuracy: 36409/60000 (61%)
+Took 6203.506194353104 seconds.
+Test set: Average loss: 1.5145, Top-1 Accuracy: 4457/6000 (74.2833%)
+Took 6204.404453754425 seconds.
+Test set: Average loss: 1.5145, Top-5 Accuracy: 5892.0/6000 (98.2000%)
+Took 6204.404453754425 seconds.
+
+----- Layer 1, Node 1, Epoch 9/30, Patience 6/15---------
+              [56320/60000 (0%)]      Loss: 0.112034
+Train set: Average loss: 0.1212
+Valid set: Average loss: 2.7505, Accuracy: 36708/60000 (61%)
+Took 6232.165001153946 seconds.
+Test set: Average loss: 1.3323, Top-1 Accuracy: 4626/6000 (77.1000%)
+Took 6233.087773561478 seconds.
+Test set: Average loss: 1.3323, Top-5 Accuracy: 5890.0/6000 (98.1667%)
+Took 6233.087773561478 seconds.
+
+----- Layer 1, Node 1, Epoch 10/30, Patience 7/15---------
+              [56320/60000 (0%)]      Loss: 0.100975
+Train set: Average loss: 0.0976
+Valid set: Average loss: 2.9273, Accuracy: 36477/60000 (61%)
+Took 6260.392159938812 seconds.
+Test set: Average loss: 1.6806, Top-1 Accuracy: 4422/6000 (73.7000%)
+Took 6261.290637254715 seconds.
+Test set: Average loss: 1.6806, Top-5 Accuracy: 5831.0/6000 (97.1833%)
+Took 6261.290637254715 seconds.
+
+----- Layer 1, Node 1, Epoch 11/30, Patience 8/15---------
+              [56320/60000 (0%)]      Loss: 0.085518
+Train set: Average loss: 0.0887
+Valid set: Average loss: 3.1738, Accuracy: 35876/60000 (60%)
+Took 6288.467668056488 seconds.
+Test set: Average loss: 1.9705, Top-1 Accuracy: 4290/6000 (71.5000%)
+Took 6289.360780954361 seconds.
+Test set: Average loss: 1.9705, Top-5 Accuracy: 5855.0/6000 (97.5833%)
+Took 6289.360780954361 seconds.
+
+----- Layer 1, Node 1, Epoch 12/30, Patience 9/15---------
+              [56320/60000 (0%)]      Loss: 0.084818
+Train set: Average loss: 0.0893
+Valid set: Average loss: 3.3246, Accuracy: 34787/60000 (58%)
+Took 6316.415046453476 seconds.
+Test set: Average loss: 1.6881, Top-1 Accuracy: 4555/6000 (75.9167%)
+Took 6317.309918642044 seconds.
+Test set: Average loss: 1.6881, Top-5 Accuracy: 5856.0/6000 (97.6000%)
+Took 6317.309918642044 seconds.
+
+----- Layer 1, Node 1, Epoch 13/30, Patience 10/15---------
+              [56320/60000 (0%)]      Loss: 0.082129
+Train set: Average loss: 0.0824
+Valid set: Average loss: 3.4537, Accuracy: 33859/60000 (56%)
+Took 6344.644704341888 seconds.
+Test set: Average loss: 1.8616, Top-1 Accuracy: 4526/6000 (75.4333%)
+Took 6345.539033412933 seconds.
+Test set: Average loss: 1.8616, Top-5 Accuracy: 5865.0/6000 (97.7500%)
+Took 6345.539033412933 seconds.
+
+----- Layer 1, Node 1, Epoch 14/30, Patience 11/15---------
+              [56320/60000 (0%)]      Loss: 0.087715
+Train set: Average loss: 0.0794
+Valid set: Average loss: 3.5199, Accuracy: 33721/60000 (56%)
+Took 6372.845015287399 seconds.
+Test set: Average loss: 2.0908, Top-1 Accuracy: 4293/6000 (71.5500%)
+Took 6373.738081932068 seconds.
+Test set: Average loss: 2.0908, Top-5 Accuracy: 5858.0/6000 (97.6333%)
+Took 6373.738081932068 seconds.
+
+----- Layer 1, Node 1, Epoch 15/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.071976
+Train set: Average loss: 0.0849
+Valid set: Average loss: 3.1095, Accuracy: 35472/60000 (59%)
+Took 6401.6057188510895 seconds.
+Test set: Average loss: 1.7683, Top-1 Accuracy: 4455/6000 (74.2500%)
+Took 6402.563820362091 seconds.
+Test set: Average loss: 1.7683, Top-5 Accuracy: 5888.0/6000 (98.1333%)
+Took 6402.563820362091 seconds.
+
+----- Layer 1, Node 1, Epoch 16/30, Patience 12/15---------
+              [56320/60000 (0%)]      Loss: 0.093189
+Train set: Average loss: 0.0800
+Valid set: Average loss: 3.4358, Accuracy: 35066/60000 (58%)
+Took 6430.283267498016 seconds.
+Test set: Average loss: 1.7767, Top-1 Accuracy: 4542/6000 (75.7000%)
+Took 6431.1936275959015 seconds.
+Test set: Average loss: 1.7767, Top-5 Accuracy: 5884.0/6000 (98.0667%)
+Took 6431.1936275959015 seconds.
+
+----- Layer 1, Node 1, Epoch 17/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.068771
+Train set: Average loss: 0.0810
+Valid set: Average loss: 3.4118, Accuracy: 34959/60000 (58%)
+Took 6458.522271871567 seconds.
+Test set: Average loss: 1.5237, Top-1 Accuracy: 4611/6000 (76.8500%)
+Took 6459.411135673523 seconds.
+Test set: Average loss: 1.5237, Top-5 Accuracy: 5891.0/6000 (98.1833%)
+Took 6459.411135673523 seconds.
+
+----- Layer 1, Node 1, Epoch 18/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.099630
+Train set: Average loss: 0.0656
+Valid set: Average loss: 3.1815, Accuracy: 35667/60000 (59%)
+Took 6486.605584383011 seconds.
+Test set: Average loss: 1.6440, Top-1 Accuracy: 4541/6000 (75.6833%)
+Took 6487.494115352631 seconds.
+Test set: Average loss: 1.6440, Top-5 Accuracy: 5878.0/6000 (97.9667%)
+Took 6487.494115352631 seconds.
+
+----- Layer 1, Node 1, Epoch 19/30, Patience 13/15---------
+              [56320/60000 (0%)]      Loss: 0.111039
+Train set: Average loss: 0.0715
+Valid set: Average loss: 3.1942, Accuracy: 35868/60000 (60%)
+Took 6514.943454742432 seconds.
+Test set: Average loss: 1.8279, Top-1 Accuracy: 4453/6000 (74.2167%)
+Took 6515.85417675972 seconds.
+Test set: Average loss: 1.8279, Top-5 Accuracy: 5846.0/6000 (97.4333%)
+Took 6515.85417675972 seconds.
+
+----- Layer 1, Node 1, Epoch 20/30, Patience 14/15---------
+              [56320/60000 (0%)]      Loss: 0.087271
+Train set: Average loss: 0.0649
+Valid set: Average loss: 3.4939, Accuracy: 34886/60000 (58%)
+Took 6543.391485691071 seconds.
+Test set: Average loss: 2.2898, Top-1 Accuracy: 4245/6000 (70.7500%)
+Took 6544.295109987259 seconds.
+Test set: Average loss: 2.2898, Top-5 Accuracy: 5804.0/6000 (96.7333%)
+Took 6544.295109987259 seconds.
+
+----- Layer 1, Node 1, Epoch 21/30, Patience 15/15---------
+              [56320/60000 (0%)]      Loss: 0.042097
+Train set: Average loss: 0.0534
+Valid set: Average loss: 3.5895, Accuracy: 35400/60000 (59%)
+Took 6571.398067474365 seconds.
+Test set: Average loss: 2.0549, Top-1 Accuracy: 4511/6000 (75.1833%)
+Took 6572.288195848465 seconds.
+Test set: Average loss: 2.0549, Top-5 Accuracy: 5896.0/6000 (98.2667%)
+Took 6572.288195848465 seconds.
+Early stopping by patience!
+return the class-wise best tmp model
+Model saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/model_cft.pth
+Tree structure saved to ./experiments/cifar10/test_ant_cifar10/0313/checkpoints/tree_structures_cft.json
+after growth:
+Test set: Average loss: 0.8232, Top-1 Accuracy: 4583/6000 (76.3833%)
+Took 6573.20184135437 seconds.
+Test set: Average loss: 0.8232, Top-5 Accuracy: 5940.0/6000 (99.0000%)
+Took 6573.20184135437 seconds.
+ ========================== test all task models ==========================
+Test set: Average loss: 2.2066, Top-1 Accuracy: 3026/6000 (50.4333%)
+Took 6574.100135564804 seconds.
+Test set: Average loss: 2.2066, Top-5 Accuracy: 5003.0/6000 (83.3833%)
+Took 6574.100135564804 seconds.
+Test set: Average loss: 1.3863, Top-1 Accuracy: 4185/6000 (69.7500%)
+Took 6575.160281896591 seconds.
+Test set: Average loss: 1.3863, Top-5 Accuracy: 5608.0/6000 (93.4667%)
+Took 6575.160281896591 seconds.
+Test set: Average loss: 2.4155, Top-1 Accuracy: 2821/6000 (47.0167%)
+Took 6576.639511346817 seconds.
+Test set: Average loss: 2.4155, Top-5 Accuracy: 4990.0/6000 (83.1667%)
+Took 6576.639511346817 seconds.
+Test set: Average loss: 1.3578, Top-1 Accuracy: 4181/6000 (69.6833%)
+Took 6578.754332542419 seconds.
+Test set: Average loss: 1.3578, Top-5 Accuracy: 5743.0/6000 (95.7167%)
+Took 6578.754332542419 seconds.
+Test set: Average loss: 1.1349, Top-1 Accuracy: 4065/6000 (67.7500%)
+Took 6581.14608669281 seconds.
+Test set: Average loss: 1.1349, Top-5 Accuracy: 5877.0/6000 (97.9500%)
+Took 6581.14608669281 seconds.
+Test set: Average loss: 1.7781, Top-1 Accuracy: 3914/6000 (65.2333%)
+Took 6582.505309343338 seconds.
+Test set: Average loss: 1.7781, Top-5 Accuracy: 5344.0/6000 (89.0667%)
+Took 6582.505309343338 seconds.
+Test set: Average loss: 2.8697, Top-1 Accuracy: 2746/6000 (45.7667%)
+Took 6583.578395843506 seconds.
+Test set: Average loss: 2.8697, Top-5 Accuracy: 5092.0/6000 (84.8667%)
+Took 6583.578395843506 seconds.
+Test set: Average loss: 1.0152, Top-1 Accuracy: 4590/6000 (76.5000%)
+Took 6584.646641731262 seconds.
+Test set: Average loss: 1.0152, Top-5 Accuracy: 5814.0/6000 (96.9000%)
+Took 6584.646641731262 seconds.
+Test set: Average loss: 1.1928, Top-1 Accuracy: 4269/6000 (71.1500%)
+Took 6586.141355276108 seconds.
+Test set: Average loss: 1.1928, Top-5 Accuracy: 5832.0/6000 (97.2000%)
+Took 6586.141355276108 seconds.
+Test set: Average loss: 0.8232, Top-1 Accuracy: 4583/6000 (76.3833%)
+Took 6587.057651042938 seconds.
+Test set: Average loss: 0.8232, Top-5 Accuracy: 5940.0/6000 (99.0000%)
+Took 6587.057651042938 seconds.
+
+Average Top-1 accuracy: tensor(63.9667)
+
+----- Top1 acc: [83.66666412353516, 82.88333129882812, 76.0666732788086, 69.80416107177734, 64.9366683959961, 61.82221984863281, 63.99761962890625, 67.93333435058594, 63.77037048339844, 63.9666633605957]
+----- Top5 acc: [99.71666717529297, 99.16667175292969, 97.727783203125, 93.57916259765625, 91.93334197998047, 90.29722595214844, 91.02144622802734, 93.84791564941406, 91.92037200927734, 92.0716781616211]
