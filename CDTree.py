@@ -1,5 +1,5 @@
 """
-Main script for training an adaptive neural tree (ANT).
+Main script for training and evaluating the CDTree.
 """
 from __future__ import print_function
 import argparse
